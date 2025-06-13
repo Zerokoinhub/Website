@@ -1011,7 +1011,7 @@ ul {
 
 .roadmap-card {
   width: 300px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(#0C1F3E , #133B5C , #0C1F3E);
   border-radius: 20px;
   padding: 30px 20px;
   text-align: center;
@@ -1162,7 +1162,14 @@ ul {
   grid-gap: 135px;
   grid-template-columns: auto 1fr;
 }
-
+@media screen and (max-width:930px) {
+  .docs-grid{
+    display: grid;
+    align-items: center;
+    grid-gap: 135px;
+    grid-template-columns: 1fr;
+  }
+}
 .docs-image img {
   width: 100%;
   max-width: 380px;
@@ -1522,6 +1529,12 @@ ul {
   /* Align items to the top */
   width: 100%;
   position: relative;
+}
+@media screen and (max-width:1086px) {
+    .tokenomics-section-main {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
 }
 
 .tokenomics-section-main__text-content-left {
