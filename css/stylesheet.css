@@ -256,7 +256,7 @@ ul {
 
 @media screen and (max-width:993px) {
  .hero-section .hero-text h1 {
-
+  font-size: 50px;
  }   
 }
 
