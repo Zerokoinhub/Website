@@ -192,6 +192,7 @@ ul {
     font-weight: 700;
     line-height: 100%;
   }
+
   .header-nav-bar .nav-links a {
     font-size: 12px;
   }
@@ -255,10 +256,25 @@ ul {
 }
 
 @media screen and (max-width:993px) {
- .hero-section .hero-text h1 {
-  font-size: 50px;
- }   
+  .hero-section .hero-text h1 {
+    font-size: 50px;
+  }
 }
+
+
+
+
+@media screen and (max-width:558px) {
+  .hero-section .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .hero-section .hero-text .description {
+    font-size: 18px;
+  }
+
+}
+
 
 .hero-section .accent {
   color: #00cfff;
@@ -295,6 +311,15 @@ ul {
   gap: 1rem;
 }
 
+@media screen and (max-width:992px) {
+  .hero-section .hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
 .hero-section .hero-buttons .btn {
   font-size: 18px;
   font-weight: 700;
@@ -302,6 +327,17 @@ ul {
   padding: 16px 32px;
   cursor: pointer;
 }
+
+@media screen and (max-width:992px) {
+  .hero-section .hero-buttons .btn {
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 13px 28px;
+    cursor: pointer;
+  }
+}
+
 
 .hero-section .hero-buttons .btn.blue {
   background: linear-gradient(90deg, #058AAD 0%, #01BBED 41%, #00CAFF 79%);
