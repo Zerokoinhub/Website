@@ -62,6 +62,8 @@ ul {
   list-style: none;
 }
 
+
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -78,7 +80,7 @@ ul {
 }
 
 
-@media screen and (max-width:1198px) {
+@media screen and (max-width:1208px) {
   .crypto-stats-wrapper {
     width: 100%;
 
@@ -86,10 +88,25 @@ ul {
 
 }
 
+@media screen and (max-width:1400px) {
+  .class_text {
+    display: none;
+  }
+
+  .class_imge1 {
+    display: none;
+  }
+
+  .class_text2 {
+    display: none;
+  }
+
+}
+
 
 .crypto-stats {
   position: relative;
-  padding: 25px 60px;
+  padding: 12px 60px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.03);
   display: flex;
@@ -97,6 +114,21 @@ ul {
   gap: 50px;
   z-index: 0;
   /* no border here */
+}
+
+@media screen and (max-width:1208px) {
+  .crypto-stats {
+    padding: 12px 30px;
+  }
+}
+
+
+@media screen and (max-width:900px) {
+  .crypto-stats {
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  }
 }
 
 
@@ -125,11 +157,7 @@ ul {
   font-weight: 600;
 }
 
-@media screen and (max-width:430px) {
-  .stat p {
-    font-size: 13px;
-  }
-}
+
 
 .stat span {
   font-size: 18px;
@@ -140,17 +168,8 @@ ul {
   font-size: 24px;
 }
 
-@media screen and (max-width:430px) {
-  .stat .head_cont {
-    font-size: 14px;
-  }
-}
 
-@media screen and (max-width:430px) {
-  .stat span {
-    font-size: 13px;
-  }
-}
+
 
 .green {
   color: #00ff9d;
@@ -160,18 +179,19 @@ ul {
 .header-nav-bar {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 180px;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid #2c3e50;
-  padding: 21px 45px 21px 24px;
-  border-radius: 12px;
+  padding: 15px 45px 15px 24px;
+  border-radius: 20px;
 }
 
-@media screen and (max-width:1198px) {
+@media screen and (max-width:1208px) {
   .header-nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     width: 100%;
   }
 }
@@ -198,6 +218,9 @@ ul {
   }
 
 }
+
+
+
 
 .header-nav-bar .logo {
   display: flex;
@@ -226,22 +249,58 @@ ul {
   transition: 0.3s;
 }
 
+@media screen and (max-width:472px) {
+  .header-nav-bar .nav-links a {
+    font-size: 15px;
+  }
+}
+
 .header-nav-bar .nav-links a:hover,
 .header-nav-bar .nav-links a:focus {
   color: #00cfff;
 }
 
 /* HERO SECTION */
-.hero-section {
-  padding: 5rem 0 8rem;
-  position: relative;
+
+
+.hero-section .here_img1 {
+  width: 645px;
+  height: 800px;
+  margin-left: 57%;
 }
 
-.hero-section .hero-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+.hero-section .here_img2 {
+  position: absolute;
+  top: 4%;
+  left: 35%;
+  width: 583px;
+}
+
+
+
+@media screen and (max-width:1400px) {
+  .hero-section .here_img1 {
+    width: 400px;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .hero-section .here_img2 {
+    width: 284px;
+    height: auto;
+    position: absolute;
+    top: 4%;
+    left: 24%;
+  }
+}
+
+
+
+
+@media screen and (max-width:1400px) {
+  .hero-section .hero-container {
+    margin-top: 60px;
+  }
 }
 
 .hero-section .hero-text {
@@ -507,7 +566,6 @@ ul {
 }
 
 .about-us-section .about-left {
-  flex: 1;
   position: relative;
   display: flex;
   justify-content: center;
@@ -518,12 +576,25 @@ ul {
   width: 260px;
 }
 
+@media screen and (max-width:992px) {
+  .about-us-section .phone-wrap {
+    top: 30px;
+    right: 30%;
+  }
+}
+
 .about-us-section .phone-img {
   width: 100%;
   z-index: 2;
   position: absolute;
   top: 15px;
   right: -18px;
+}
+
+@media screen and (max-width:992px) {
+  .about-us-section .phone-img {
+    right: -121px;
+  }
 }
 
 .about-us-section .coin {
@@ -588,7 +659,7 @@ ul {
   font-size: 18px;
   margin-bottom: 80px;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 30px;
   letter-spacing: 0.45px;
 }
 
@@ -787,12 +858,14 @@ ul {
   position: relative;
   overflow: hidden;
 }
- 
+
+
+
 @media screen and (max-width:1072px) {
-  .launch-section{
+  .launch-section {
     display: grid;
-    grid-template-columns: 2fr ;
-  }  
+    grid-template-columns: 2fr;
+  }
 }
 
 .launch-section .launch-section__content {
@@ -812,7 +885,8 @@ ul {
 
 .launch-section .launch-section__subtext {
   margin: 1.5rem 0;
-  color: #00ccff;
+  color: #A5F3FC;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
@@ -845,6 +919,16 @@ ul {
   position: relative;
   height: 500px;
   margin-top: 2rem;
+}
+
+
+@media screen and (max-width:1072px) {
+  .launch-section .launch-section__visual {
+    position: relative;
+    height: 500px;
+    margin-top: 5rem;
+  }
+
 }
 
 .launch-section .launch-section__mobile {
@@ -936,7 +1020,7 @@ ul {
   }
 
   .launch-section .launch-section__visual {
-    width: 250px;
+    width: 350px;
     height: 400px;
   }
 
@@ -982,15 +1066,21 @@ ul {
   margin-bottom: 60px;
 }
 
+@media screen and (max-width:530px) {
+  .key-features .section-title {
+    font-size: 1.8rem;
+  }
+}
+
 /* .section-title span {
     color: #ffc800;
   } */
 .roadmap-card-wrapper {
-  padding: 2px;
-  border-radius: 36px;
+  padding: 3px;
+  border-radius: 29px;
   border-image-slice: 1;
-  background: linear-gradient(161.06deg, rgba(226, 209, 47, 0) 25.7%, rgba(239, 234, 26, -2.6) 25.55%, #b8b201 36.4%, #efea1a 67.88%, rgba(252, 225, 26, 0) 79.18%);
-  display: inline;
+  background: linear-gradient(161.06deg, rgba(226, 209, 47, 0) 21.7%, rgba(239, 234, 26, -2.6) 10.55%, #b8b201 77.4%, #efea1a 71.88%, rgba(252, 225, 26, 0) 65.18%);
+  display: inline-block;
 }
 
 .roadmap-card-main {
@@ -1011,7 +1101,7 @@ ul {
 
 .roadmap-card {
   width: 300px;
-  background: rgba(#0C1F3E , #133B5C , #0C1F3E);
+  background: linear-gradient(to bottom, #0C1F3E, #133B5C, #0C1F3E);
   border-radius: 20px;
   padding: 30px 20px;
   text-align: center;
@@ -1089,17 +1179,17 @@ ul {
 
 /* Glowing Border Styles */
 .tier3 {
-  border: 1px solid #00bfff;
+  border: 1px solid #FFFFFF;
   box-shadow: 0 0 20px #00bfff88;
 }
 
 .tier2 {
-  border: 1px solid #a259ff;
+  border: 1px solid #FFFFFF;
   box-shadow: 0 0 20px #a259ff88;
 }
 
 .tier1 {
-  border: 1px solid #ffd700;
+  border: 1px solid #FFFFFF;
   box-shadow: 0 0 20px #ffd70088;
 }
 
@@ -1144,11 +1234,10 @@ ul {
     width: 100%;
     max-width: 90%;
   }
-
-  .section-title {
-    font-size: 1.5rem;
-  }
 }
+
+
+
 
 .documents-section {
   padding: 0 20px;
@@ -1162,14 +1251,16 @@ ul {
   grid-gap: 135px;
   grid-template-columns: auto 1fr;
 }
+
 @media screen and (max-width:930px) {
-  .docs-grid{
+  .docs-grid {
     display: grid;
     align-items: center;
     grid-gap: 135px;
     grid-template-columns: 1fr;
   }
 }
+
 .docs-image img {
   width: 100%;
   max-width: 380px;
@@ -1327,7 +1418,7 @@ ul {
   color: var(--label-color);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  
+
 }
 
 .zero-koin-info-grid__item-value {
@@ -1530,11 +1621,14 @@ ul {
   width: 100%;
   position: relative;
 }
+
 @media screen and (max-width:1086px) {
-    .tokenomics-section-main {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
+  .tokenomics-section-main__content-layout {
+    display: flex;
+    /* flex-direction: column; */
+  }
+
+  .tokenomics-section-main__chart-image-container {}
 }
 
 .tokenomics-section-main__text-content-left {
@@ -1597,11 +1691,38 @@ ul {
 
 .tokenomics-section-main__chart-image {
   max-width: 100%;
-  /* Ensure image scales down if container is smaller */
   height: auto;
-  display: block;
-  /* Remove extra space below image */
+  display: inline-block;
+  position: absolute;
+  right: -10%;
+  top: -34%;
 }
+
+@media screen and (max-width:992px) {
+  .tokenomics-section-main__chart-image {
+    /* max-width: 100%; */
+    width: 1700px;
+    height: auto;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: -22.5%;
+  }
+}
+
+
+
+/* .tokenomics-section-main__chart-image1 {
+  position: absolute;
+  bottom: -15%;
+  left: 66%;
+}
+
+@media screen and (max-width:1161px) {
+  .tokenomics-section-main__chart-image1 {
+    position: relative;
+  }
+} */
 
 
 /* Responsive adjustments for Tokenomics */
@@ -1654,7 +1775,7 @@ ul {
 
   .tokenomics-section-main__chart-image-container {
     width: 300px;
-    /* Adjust chart image size for smaller screens */
+
   }
 }
 
@@ -1721,7 +1842,7 @@ ul {
 
 .roadmap-section-main__grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   /* Responsive grid for cards */
   gap: 30px;
   align-items: center;
@@ -1832,6 +1953,9 @@ ul {
 
   .roadmap-card {
     padding: 25px;
+    max-width: 300px;
+    width: 100%;
+
   }
 
   .roadmap-card__quarter {
@@ -2019,8 +2143,8 @@ ul {
 .sectiontop-border-circle {
   position: absolute;
   top: 34%;
-  padding: 20px;
-  right: 97px;
+  padding: 10px;
+  right: 10px;
   border-radius: 590px;
   border: 1px solid rgba(122, 151, 187, 1);
   backdrop-filter: blur(10px);
@@ -2180,13 +2304,18 @@ ul {
 }
 
 .site-footer {
-  padding: 0 20px;
-  /* No top padding as arc is handled by pseudo-element */
+  padding: 0 70px;
   position: relative;
   overflow: hidden;
-  /* Crucial to contain the top arc and bottom line */
   text-align: center;
   color: var(--text-color);
+  border: 2px solid #00bfff;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  margin: 0px 50px;
 }
 
 .site-footer__content-wrapper {
@@ -2224,7 +2353,7 @@ ul {
 }
 
 .site-footer__nav-link {
-  color: var(--text-color);
+  color: #82858E;
   text-decoration: none;
   font-size: 1em;
   /* Adjusted font size */
@@ -2313,13 +2442,14 @@ ul {
 
 
 .site-footer__copyright {
+
   padding: 5px 0;
   height: 30px;
   text-align: center;
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1500px;
   background: linear-gradient(to right, rgba(0, 191, 255, 0) 0%,
       /* Transparent at start */
       var(--footer-bottom-line-color) 20%,
@@ -2331,12 +2461,13 @@ ul {
     );
   opacity: 0.8;
   filter: blur(0.2px);
-  margin: 0 auto;
+  margin: 30px auto 0px auto;
 }
 
 .site-footer__copyright-text {
   font-size: 0.9em;
-  color: var(--label-color);
+  color: black;
+  font-weight: 700;
 }
 
 .footer-logo {
