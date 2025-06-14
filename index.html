@@ -23,25 +23,203 @@
     /* Ensure header content stays above the gradient */
   }
 
+  .hero-section {
+    margin-top: -8%;
+  }
+
+  @media screen and (max-width:1300px) {
+    .hero-section {
+      margin-top: 0;
+    }
+
+  }
+
   .hero-section .hero-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -8%;
+
+  }
+
+
+  /* Roadmap Section Responsive Styles */
+  .roadmap-section-main {
+    position: relative;
+    padding: 60px 0;
+    overflow: hidden;
+  }
+
+  .koin-road-map-wrapper {
+    padding: 2px;
+    border-radius: 36px;
+    background: linear-gradient(161.06deg, rgba(226, 209, 47, 0) 25.7%, rgba(239, 234, 26, -2.6) 25.55%, #b8b201 36.4%, #efea1a 67.88%, rgba(252, 225, 26, 0) 79.18%);
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .koin-road-map {
+    border-radius: 33px;
+    background: #0d1223;
+    padding: 60px 30px;
+  }
+
+  .roadmap-section-main__title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+    background: linear-gradient(90deg, #FFFFFF 0%, #999999 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .roadmap-section-main__grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .roadmap-card-second {
+    background: linear-gradient(90deg, rgba(12, 31, 62, 0.99) 20%, rgba(19, 59, 92, 0.99) 40%, rgba(12, 31, 62, 0.99) 60%);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 24px 0px rgba(23, 211, 255, 0.4), 0px 0px 4px 0px rgba(0, 191, 255, 1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .roadmap-card-second:hover {
+    transform: translateY(-10px);
+  }
+
+  .roadmap-card__quarter {
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .roadmap-card__year {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: rgba(12, 9, 30, 1);
+    -webkit-text-stroke: 0.5px white;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .roadmap-card__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  .roadmap-card__list li {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+    line-height: 1.4;
+  }
+
+  .roadmap-card__list li::before {
+    content: "";
+    background-image: url('../images/tickcircleicon.svg');
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 991px) {
+    .roadmap-section-main__grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .koin-road-map {
+      padding: 50px 20px;
+    }
+
+    .roadmap-section-main__title {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .roadmap-section-main__grid-container {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .koin-road-map {
+      padding: 40px 15px;
+    }
+
+    .roadmap-section-main__title {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+
+    .roadmap-card-second {
+      padding: 25px 20px;
+    }
+
+    .roadmap-card__quarter {
+      font-size: 1.1rem;
+    }
+
+    .roadmap-card__year {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .roadmap-card__list li {
+      font-size: 0.95rem;
+      padding-left: 22px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .roadmap-section-main__title {
+      font-size: 1.6rem;
+    }
+
+    .roadmap-card__list li {
+      font-size: 0.9rem;
+      line-height: 1.3;
+    }
+  }
+
+  @media screen and (max-width:1400px) {
+    .top_gradient {
+      display: none;
+    }
   }
 </style>
 
 <body>
   <header class="header">
-    <div class="" style="position: absolute; left: -15%; top: -80%;">
+    <div class="top_gradient" style="position: absolute; left: -18%; top: -600px;">
       <img src="images\Gradient(1).png" alt="">
     </div>
+
     <div class="container top-bar">
       <div class="crypto-stats-wrapper">
         <div class="crypto-stats">
           <div class="stat">
             <p>Zerokoin/USDT</p>
-            <span style="font-size: 24px;">$0.0031</span>
+            <span class="head_count">$0.0031</span>
           </div>
           <div class="stat">
             <p>24h Δ</p>
@@ -61,7 +239,7 @@
           </a>
         </div>
         <ul class="nav-links">
-          <li><a href="Homepage.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="downloadapp.html">Download DApp</a></li>
           <li><a href="aboutus.html">About us</a></li>
         </ul>
@@ -314,7 +492,7 @@
         </div>
       </div>
     </div>
-    <div class="yellow-shadmap"><img style="position: absolute; transform: rotate(180deg); left: -10%; bottom: -30%;"
+    <div class="yellow-shadmap"><img style="position: absolute; transform: rotate(180deg); left: -15%; bottom: -30%;"
         src="images/Gradient1.svg" alt=""></div>
     <div class="class_text2"
       style="font-size: 272px; font-weight: 800; line-height: 100%; width: 100%; opacity: 1.5%; ">
@@ -481,7 +659,7 @@
       </div>
 
       <div class="tokenomics-section-main__chart-image-container">
-        <img src="images/tecnobg-gradiant.svg" class="tokenomics-section-main__chart-image1"  />
+        <img src="images/tecnobg-gradiant.svg" class="tokenomics-section-main__chart-image1" />
         <img src="images/limit-circle.svg" alt="Tokenomics Pie Chart" class="tokenomics-section-main__chart-image"
           style="">
       </div>
