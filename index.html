@@ -89,6 +89,7 @@
     box-shadow: 0px 0px 24px 0px rgba(23, 211, 255, 0.4), 0px 0px 4px 0px rgba(0, 191, 255, 1);
     text-align: center;
     transition: transform 0.3s ease;
+    margin-left: 5%;
   }
 
   .roadmap-card-second:hover {
@@ -206,6 +207,119 @@
       display: none;
     }
   }
+
+  .tokenomics-section-main__chart-image-container img {
+    height: 600px;
+    width: 600px;
+  }
+
+  @media screen and (max-width:992px) {
+    .tokenomics-section-main__chart-image-container img {
+      height: 400px;
+      width: 400px;
+    }
+  }
+
+
+
+
+  .silver-coin {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    right: 33%;
+    top: 28%;
+    animation: orbitSilver 12s linear infinite;
+    transform-origin: center;
+  }
+
+  /* Animation for the gold coin */
+  .gold-coin {
+    position: absolute;
+    right: 26%;
+    width: 80px;
+    height: 80px;
+    animation: orbitGold 8s linear infinite;
+    transform-origin: center;
+  }
+
+  /* Silver coin orbit path */
+  @keyframes orbitSilver {
+    0% {
+      transform: rotate(0deg) translateX(290px) rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg) translateX(90px) rotate(-360deg);
+    }
+  }
+
+  /* Gold coin orbit path */
+  @keyframes orbitGold {
+    0% {
+      transform: rotate(0deg) translateX(30px) rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg) translateX(30px) rotate(-360deg);
+    }
+  }
+
+  /* Optional: Add a floating effect */
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Apply floating to both coins */
+  .silver-coin,
+  .gold-coin {
+    animation:
+      orbitSilver 12s linear infinite,
+      float 3s ease-in-out infinite;
+  }
+
+  .gold-coin {
+    animation:
+      orbitGold 8s linear infinite,
+      float 3s ease-in-out infinite;
+  }
+
+  /* Add shine effect */
+  @keyframes shine {
+    0% {
+      filter: brightness(1);
+    }
+
+    50% {
+      filter: brightness(1.3);
+    }
+
+    100% {
+      filter: brightness(1);
+    }
+  }
+
+  .silver-coin {
+    animation:
+      orbitSilver 12s linear infinite,
+      float 3s ease-in-out infinite,
+      shine 4s ease-in-out infinite;
+  }
+
+  .gold-coin {
+    animation:
+      orbitGold 8s linear infinite,
+      float 3s ease-in-out infinite,
+      shine 3s ease-in-out infinite;
+  }
 </style>
 
 <body>
@@ -263,11 +377,13 @@
 
       <!-- RIGHT ANIMATION -->
       <div class="hero-visual">
+        <img src="images\Banner Left Side.svg" class="here_img1" alt="">
+        <img src="images/silvercoin.svg" class="silver-coin" alt="">
+        <img src="images\Zero Koin Gold.svg" class="gold-coin" alt="">
 
-        <img src="images\Frame 29.png" class="here_img1" alt="">
         <img src="images\Group 15.png" class="here_img2" alt="">
         <img src="images\Gradient(1).png" class="class_imge1"
-          style="position: absolute; left: 33%; transform: rotate(180deg); " alt="">
+          style="position: absolute; left: 33%; transform: rotate(180deg);" alt="">
       </div>
     </div>
     <div class="class_text"
@@ -659,10 +775,9 @@
       </div>
 
       <div class="tokenomics-section-main__chart-image-container">
-        <img src="images/tecnobg-gradiant.svg" class="tokenomics-section-main__chart-image1" />
-        <img src="images/limit-circle.svg" alt="Tokenomics Pie Chart" class="tokenomics-section-main__chart-image"
-          style="">
+        <img src="images\Pi Chart.svg" style="" alt="">
       </div>
+
     </div>
   </section>
 

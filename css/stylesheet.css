@@ -206,7 +206,7 @@ ul {
 
 
 @media screen and (max-width:428px) {
-  .stat span{
+  .stat span {
     font-size: 14px;
     color: rgba(218, 218, 218, 1);
     font-weight: 600;
@@ -221,7 +221,7 @@ ul {
 
 
 @media screen and (max-width:428px) {
-  .stat .head_cont{
+  .stat .head_cont {
     font-size: 14px;
   }
 }
@@ -321,14 +321,14 @@ ul {
 .hero-section .here_img1 {
   width: 645px;
   height: 800px;
-  margin-left: 57%;
+  margin-left: 87%;
 }
 
 .hero-section .here_img2 {
   position: absolute;
-  top: 4%;
-  left: 35%;
-  width: 583px;
+  top: 15%;
+  left: 52%;
+  width: 383px;
 }
 
 
@@ -341,11 +341,7 @@ ul {
   }
 
   .hero-section .here_img2 {
-    width: 284px;
-    height: auto;
-    position: absolute;
-    top: 4%;
-    left: 24%;
+   display: none;
   }
 }
 
@@ -353,9 +349,9 @@ ul {
 
 @media screen and (max-width:525px) {
   .hero-section .here_img1 {
-    width: 290px;
+    width: 390px;
     height: auto;
-    margin-left: -5%;
+    margin-left: 15%;
   }
 
 }
@@ -1760,11 +1756,8 @@ ul {
 .tokenomics-section-main__content-layout {
   display: flex;
   flex-wrap: wrap;
-  /* Allows content to wrap on smaller screens */
-  justify-content: space-between;
-  /* Pushes content and image to edges */
-  align-items: flex-start;
-  /* Align items to the top */
+  justify-content: center;
+  align-items: center;
   width: 100%;
   position: relative;
 }
@@ -1834,6 +1827,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-items: center;
 }
 
 .tokenomics-section-main__chart-image {
@@ -1879,11 +1873,11 @@ ul {
 
   .tokenomics-section-main__content-layout {
     flex-direction: column;
-    /* Stack text and image vertically */
+
     align-items: center;
-    /* Center stacked items */
+
     gap: 30px;
-    /* Spacing between stacked text and image */
+
   }
 
   .tokenomics-section-main__text-content-left {
