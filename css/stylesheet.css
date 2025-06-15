@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 h1,
 h2,
 h3,
@@ -321,7 +324,7 @@ ul {
 .hero-section .here_img1 {
   width: 645px;
   height: 800px;
-  margin-left: 87%;
+  margin-left: 80%;
 }
 
 .hero-section .here_img2 {
@@ -659,7 +662,7 @@ ul {
   z-index: 2;
   position: absolute;
   top: 15px;
-  right: -18px;
+  right: -7%;
 }
 
 @media screen and (max-width:992px) {

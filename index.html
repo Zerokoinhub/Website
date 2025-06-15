@@ -320,6 +320,48 @@
       float 3s ease-in-out infinite,
       shine 3s ease-in-out infinite;
   }
+
+  .why-card-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Spinner orbit container */
+  .spinner-orbit {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateOrbit 2s linear infinite;
+  }
+
+  /* Spinner items inside orbit */
+  .spinner-orbit img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .spinner-orbit img:last-child {
+    top: auto;
+    bottom: 0;
+  }
+
+  /* Orbit rotation animation */
+  @keyframes rotateOrbit {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
 </style>
 
 <body>
@@ -377,9 +419,7 @@
 
       <!-- RIGHT ANIMATION -->
       <div class="hero-visual">
-        <img src="images\Banner Left Side.svg" class="here_img1" alt="">
-        <img src="images/silvercoin.svg" class="silver-coin" alt="">
-        <img src="images\Zero Koin Gold.svg" class="gold-coin" alt="">
+        <img src="images\Frame 29.png" class="here_img1" alt="">
 
         <img src="images\Group 15.png" class="here_img2" alt="">
         <img src="images\Gradient(1).png" class="class_imge1"
@@ -393,7 +433,7 @@
 
   <!-- About SECTION -->
   <section class="about-us-section">
-    <div class="yellow-shadabout"><img src="images/Gradient1.svg" alt=""></div>
+    <div class="yellow-shadabout" style="z-index: -1;"><img src="images/Gradient1.svg" alt=""></div>
     <div class="container about-container">
       <div class="about-left">
 
@@ -464,26 +504,34 @@
     <div class="container why-container">
       <h2 class="why-title" style="margin-bottom: 80px;">Why We Exist</h2>
       <div class="why-grid">
+
         <div class="why-card">
           <div class="why-card-content">
-            <div class="move-icon" style="position: absolute; top: -29%; left: 37%;"><img src="images/topcircle.svg" />
+
+            <!-- Orbit with rotating icons -->
+            <div class="spinner-orbit">
+              <img src="images/topcircle.svg" alt="Rotating Icon 1" />
+              <img src="images/bottomcircle.svg" alt="Rotating Icon 2" />
             </div>
-            <div class="move-icon" style="left: 41%; position: absolute; top: -8%;"><img
-                src="images/bottomcircle.svg" /></div>
+
+            <!-- Center icon -->
             <div class="why-icon"
-              style="border: 4px solid rgba(42, 175, 203, 1); border-radius: 50%; height: 56px; width: 56px; display: flex ; justify-content: center; align-items: center; padding: 8px;">
+              style="border: 4px solid rgba(42, 175, 203, 1); border-radius: 50%; height: 56px; width: 56px; display: flex; justify-content: center; align-items: center; padding: 8px; z-index: 2;">
               <img src="images/book1.svg" alt="Learn Icon" />
             </div>
-            <h4 class="why-heading " style="margin-top: 5px;">Crypto Learning, Simplified</h4>
+
+            <h4 class="why-heading" style="margin-top: 5px;">Crypto Learning, Simplified</h4>
             <p class="why-text">Accessible, bite-sized crypto lessons for everyone.</p>
           </div>
         </div>
+
+
         <div class="why-card">
           <div class="why-card-content">
-            <div class="move-icon" style="position: absolute; top: -29%; left: 37%;"><img src="images/topcircle.svg" />
+            <div class="spinner-orbit">
+              <img src="images/topcircle.svg" alt="Rotating Icon 1" />
+              <img src="images/bottomcircle.svg" alt="Rotating Icon 2" />
             </div>
-            <div class="move-icon" style="left: 41%; position: absolute; top: -8%;"><img
-                src="images/bottomcircle.svg" /></div>
             <div class="why-icon"
               style="border: 4px solid rgba(42, 175, 203, 1); border-radius: 50%; height: 56px; width: 56px; display: flex ; justify-content: center; align-items: center; padding: 8px;">
               <img src="images/setting1.svg" alt="Setting Icon" />
@@ -492,12 +540,13 @@
             <p class="why-text">Real tools, not tutorials. Built for crypto users.</p>
           </div>
         </div>
+
         <div class="why-card">
           <div class="why-card-content">
-            <div class="move-icon" style="position: absolute; top: -29%; left: 37%;"><img src="images/topcircle.svg" />
+            <div class="spinner-orbit">
+              <img src="images/topcircle.svg" alt="Rotating Icon 1" />
+              <img src="images/bottomcircle.svg" alt="Rotating Icon 2" />
             </div>
-            <div class="move-icon" style="left: 41%; position: absolute; top: -8%;"><img
-                src="images/bottomcircle.svg" /></div>
             <div class="why-icon"
               style="border: 4px solid rgba(42, 175, 203, 1); border-radius: 50%; height: 56px; width: 56px; display: flex ; justify-content: center; align-items: center; padding: 8px;">
               <img src="images/web1.svg" alt="Web 3 Icon" />
@@ -506,12 +555,13 @@
             <p class="why-text">Connecting minds, rewards, and opportunities worldwide.</p>
           </div>
         </div>
+
         <div class="why-card">
           <div class="why-card-content">
-            <div class="move-icon" style="position: absolute; top: -29%; left: 37%;"><img src="images/topcircle.svg" />
+            <div class="spinner-orbit">
+              <img src="images/topcircle.svg" alt="Rotating Icon 1" />
+              <img src="images/bottomcircle.svg" alt="Rotating Icon 2" />
             </div>
-            <div class="move-icon" style="left: 41%; position: absolute; top: -8%;"><img
-                src="images/bottomcircle.svg" /></div>
             <div class="why-icon"
               style="border: 4px solid rgba(42, 175, 203, 1); border-radius: 50%; height: 56px; width: 56px; display: flex ; justify-content: center; align-items: center; padding: 8px;">
               <img src="images/earn1.svg" alt="Earn Icon" />
@@ -520,6 +570,7 @@
             <p class="why-text">Turn your learning into tangible crypto rewards.</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
