@@ -38,7 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-top: 4%;
   }
 
 
@@ -250,7 +250,6 @@
     animation: spin 2s linear infinite;
     transform-origin: center;
     position: absolute !important;
-    /* Force absolute positioning */
     top: -42.5%;
     left: 31%;
     width: 118px;
@@ -268,50 +267,145 @@
     }
   }
 
+
   @media screen and (max-width: 452px) {
     .spinner {
-      top: -45% !important;
-      left: 33% !important;
-      width: 113px;
-      height: 130px;
+      top: -44%;
+      left: 36%;
+      width: 114px;
+      height: 135px;
     }
   }
+
+
 
   /* Mobile First Approach - Start with smallest screens */
-  @media screen and (max-width: 480px) {
-    .spinner {
-      top: -44.5% !important;
-      left: 31% !important;
-      width: 113px;
-      height: 130px;
 
+  @media screen and (max-width: 414px) {
+    .spinner {
+      top: -48.5%;
+      left: 35%;
+      width: 112px;
+      height: 143px;
     }
   }
 
-  /* Then medium screens */
-  @media screen and (min-width: 481px) and (max-width: 768px) {
+  @media screen and (max-width: 412px) {
     .spinner {
-      top: -45% !important;
-      left: 33% !important;
+      top: -47.5%;
+      left: 35%;
+      width: 112px;
+      height: 143px;
+    }
+  }
 
+
+
+
+  @media screen and (max-width: 375px) {
+    .spinner {
+      top: -46.5%;
+      left: 33%;
+      width: 112px;
+      height: 139px;
+    }
+  }
+
+
+
+  @media screen and (max-width: 390px) {
+    .spinner {
+      top: -48.5%;
+      left: 34%;
+      width: 112px;
+      height: 141px;
+    }
+  }
+
+
+
+
+
+
+  @media screen and (max-width: 384px) {
+    .spinner {
+      top: -47.5%;
+      left: 34%;
+      width: 112px;
+      height: 141px;
+    }
+  }
+
+
+  @media screen and (max-width: 360px) {
+    .spinner {
+      top: -45.5%;
+      left: 33%;
+      width: 109px;
+      height: 135px;
+    }
+  }
+
+
+  @media screen and (min-width: 453px) and (max-width: 484px) {
+    .spinner {
+      top: -44%;
+      left: 36%;
     }
   }
 
   /* Then larger screens */
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
+  @media screen and (min-width: 485px) and (max-width: 500px) {
     .spinner {
-      top: -44% !important;
-      left: 31% !important;
+      top: -46%;
+      left: 37%;
 
     }
   }
 
-  /* Largest screens */
-  @media screen and (min-width: 1025px) {
+  @media screen and (min-width: 501px) and (max-width: 560px) {
     .spinner {
-      top: -42.5% !important;
-      left: 31% !important;
+      top: -44%;
+      left: 38%;
 
+    }
+  }
+
+  @media screen and (min-width: 560px) and (max-width: 600px) {
+    .spinner {
+      top: -47%;
+      left: 39%;
+
+    }
+  }
+
+
+  @media screen and (min-width: 600px) and (max-width: 630px) {
+    .spinner {
+      top: -44%;
+      left: 27%;
+    }
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 768px) {
+    .spinner {
+      top: -44%;
+      left: 33%;
+    }
+  }
+
+
+  @media screen and (min-width: 769px) and (max-width: 820px) {
+    .spinner {
+      top: -44%;
+      left: 34%;
+    }
+  }
+
+  @media screen and (min-width: 821px) and (max-width: 1024px) {
+    .spinner {
+      top: -46%;
+      left: 30%;
     }
   }
 </style>
@@ -474,8 +568,7 @@
 
         <div class="why-card">
           <div class="why-card-content">
-            <img src="images/Loadings Shapes.svg" class="spinner" style="position: absolute; top: -42.5%; left: 31%;"
-              alt="Rotating Icon" />
+            <img src="images/Loadings Shapes.svg" class="spinner" alt="Rotating Icon" />
             <div class="why-icon"
               style="border: 4px solid rgba(42, 175, 203, 1); border-radius: 50%; height: 60px; width: 56px; display: flex ; justify-content: center; align-items: center; padding: 8px;">
               <img src="images/setting1.svg" alt="Setting Icon" />
@@ -862,7 +955,9 @@
     <img src="images/binance.svg" alt="Bitcoin Icon"
       class="download-section-main__floating-icon download-section-main__floating-icon--left">
     <img src="images/earn.svg" alt="Coins Icon"
-      class="download-section-main__floating-icon download-section-main__floating-icon--right">
+      class="download-section-main__floating-icon download-section-main__floating-icon--right"
+      style="z-index: -1;"
+      >
 
     <h2 class="download-section-main__title">Download Now</h2>
     <p class="download-section-main__description">Join thousands already learning and earning with Zero Koin.
@@ -917,6 +1012,43 @@
               stroke="none">
               <path
                 d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 6.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 3.772-8.601 8.399-8.601s8.601 3.931 8.601 8.601v8.399h4.968v-9.135c0-6.004-4.135-9.865-9.865-9.865z" />
+            </svg>
+          </a>
+          <a href="https://telegram.com" class="site-footer__social-icon-btn">
+            <svg height="20" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg">
+              <g id="_x33_35-telegram">
+                <g>
+                  <g>
+                    <path
+                      d="M484.689,98.231l-69.417,327.37c-5.237,23.105-18.895,28.854-38.304,17.972L271.2,365.631     l-51.034,49.086c-5.646,5.647-10.371,10.372-21.256,10.372l7.598-107.722L402.539,140.23c8.523-7.598-1.848-11.809-13.247-4.21     L146.95,288.614L42.619,255.96c-22.694-7.086-23.104-22.695,4.723-33.579L455.423,65.166     C474.316,58.081,490.85,69.375,484.689,98.231z"
+                      style="fill:white"></path>
+                  </g>
+                </g>
+              </g>
+              <g id="Layer_1"></g>
+            </svg>
+          </a>
+          <a href="https://twiter.com" class="site-footer__social-icon-btn">
+            <svg height="20" version="1.1" viewBox="0 0 512 512" width="100%" fill="none" xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect height="400" width="400" x="56" y="56"></rect>
+              <path
+                d="M161.014,464.013c193.208,0 298.885,-160.071 298.885,-298.885c0,-4.546 0,-9.072 -0.307,-13.578c20.558,-14.871 38.305,-33.282 52.408,-54.374c-19.171,8.495 -39.51,14.065 -60.334,16.527c21.924,-13.124 38.343,-33.782 46.182,-58.102c-20.619,12.235 -43.18,20.859 -66.703,25.498c-19.862,-21.121 -47.602,-33.112 -76.593,-33.112c-57.682,0 -105.145,47.464 -105.145,105.144c0,8.002 0.914,15.979 2.722,23.773c-84.418,-4.231 -163.18,-44.161 -216.494,-109.752c-27.724,47.726 -13.379,109.576 32.522,140.226c-16.715,-0.495 -33.071,-5.005 -47.677,-13.148l0,1.331c0.014,49.814 35.447,93.111 84.275,102.974c-15.464,4.217 -31.693,4.833 -47.431,1.802c13.727,42.685 53.311,72.108 98.14,72.95c-37.19,29.227 -83.157,45.103 -130.458,45.056c-8.358,-0.016 -16.708,-0.522 -25.006,-1.516c48.034,30.825 103.94,47.18 161.014,47.104"
+                style="fill:#ffffff;fill-rule:nonzero"></path>
+            </svg>
+          </a>
+          <a href="https://discord.com" class="site-footer__social-icon-btn">
+            <svg height="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title></title>
+              <path fill="#ffffff"
+                d="M20.222 0c1.406 0 2.54 1.137 2.607 2.475V24l-2.677-2.273-1.47-1.338-1.604-1.398.67 2.205H3.71c-1.402 0-2.54-1.065-2.54-2.476V2.48C1.17 1.142 2.31.003 3.715.003h16.5L20.222 0zm-6.118 5.683h-.03l-.202.2c2.073.6 3.076 1.537 3.076 1.537-1.336-.668-2.54-1.002-3.744-1.137-.87-.135-1.74-.064-2.475 0h-.2c-.47 0-1.47.2-2.81.735-.467.203-.735.336-.735.336s1.002-1.002 3.21-1.537l-.135-.135s-1.672-.064-3.477 1.27c0 0-1.805 3.144-1.805 7.02 0 0 1 1.74 3.743 1.806 0 0 .4-.533.805-1.002-1.54-.468-2.14-1.404-2.14-1.404s.134.066.335.2h.06c.03 0 .044.015.06.03v.006c.016.016.03.03.06.03.33.136.66.27.93.4.466.202 1.065.403 1.8.536.93.135 1.996.2 3.21 0 .6-.135 1.2-.267 1.8-.535.39-.2.87-.4 1.397-.737 0 0-.6.936-2.205 1.404.33.466.795 1 .795 1 2.744-.06 3.81-1.8 3.87-1.726 0-3.87-1.815-7.02-1.815-7.02-1.635-1.214-3.165-1.26-3.435-1.26l.056-.02zm.168 4.413c.703 0 1.27.6 1.27 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334.002-.74.573-1.338 1.27-1.338zm-4.543 0c.7 0 1.266.6 1.266 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334 0-.74.57-1.338 1.27-1.338z">
+              </path>
+              <linearGradient id="paint0_linear_31_1333" x1="12.8371" y1="28.3301" x2="22.9768" y2="22.468"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="0.477043" stop-color="#23CAEA"></stop>
+                <stop offset="1" stop-color="#0680B7"></stop>
+              </linearGradient>
             </svg>
           </a>
         </div>
