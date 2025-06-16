@@ -221,145 +221,97 @@
   }
 
 
-
-
-  .silver-coin {
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    right: 33%;
-    top: 28%;
-    animation: orbitSilver 12s linear infinite;
-    transform-origin: center;
-  }
-
-  /* Animation for the gold coin */
-  .gold-coin {
-    position: absolute;
-    right: 26%;
-    width: 80px;
-    height: 80px;
-    animation: orbitGold 8s linear infinite;
-    transform-origin: center;
-  }
-
-  /* Silver coin orbit path */
-  @keyframes orbitSilver {
-    0% {
-      transform: rotate(0deg) translateX(290px) rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(360deg) translateX(90px) rotate(-360deg);
+  @media screen and (max-width:992px) {
+    .about-us-section .phone-wrap {
+      top: 30px;
+      right: 47%;
     }
   }
 
-  /* Gold coin orbit path */
-  @keyframes orbitGold {
-    0% {
-      transform: rotate(0deg) translateX(30px) rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(360deg) translateX(30px) rotate(-360deg);
-    }
+  .gradient-text {
+    background: white;
+    background-clip: border-box;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: white;
+    font-weight: 700;
+    text-shadow: 0px 1px 24px rgba(145, 65, 236, 0.57);
   }
 
-  /* Optional: Add a floating effect */
-  @keyframes float {
-
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-
-  /* Apply floating to both coins */
-  .silver-coin,
-  .gold-coin {
-    animation:
-      orbitSilver 12s linear infinite,
-      float 3s ease-in-out infinite;
-  }
-
-  .gold-coin {
-    animation:
-      orbitGold 8s linear infinite,
-      float 3s ease-in-out infinite;
-  }
-
-  /* Add shine effect */
-  @keyframes shine {
-    0% {
-      filter: brightness(1);
-    }
-
-    50% {
-      filter: brightness(1.3);
-    }
-
-    100% {
-      filter: brightness(1);
-    }
-  }
-
-  .silver-coin {
-    animation:
-      orbitSilver 12s linear infinite,
-      float 3s ease-in-out infinite,
-      shine 4s ease-in-out infinite;
-  }
-
-  .gold-coin {
-    animation:
-      orbitGold 8s linear infinite,
-      float 3s ease-in-out infinite,
-      shine 3s ease-in-out infinite;
-  }
-
+  /* Spinner Styles */
   .why-card-content {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* This is essential for absolute positioning of children */
   }
 
-  /* Spinner orbit container */
-  .spinner-orbit {
-    position: absolute;
-    width: 100px;
-    height: 90px;
-    top: -9%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: rotateOrbit 2s linear infinite;
+  .spinner {
+    animation: spin 2s linear infinite;
+    transform-origin: center;
+    position: absolute !important;
+    /* Force absolute positioning */
+    top: -42.5%;
+    left: 31%;
+    width: 118px;
+    height: 130px;
+    z-index: 1;
   }
 
-  /* Spinner items inside orbit */
-  .spinner-orbit img {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .spinner-orbit img:last-child {
-    top: auto;
-    bottom: 0;
-  }
-
-  /* Orbit rotation animation */
-  @keyframes rotateOrbit {
+  @keyframes spin {
     0% {
-      transform: translate(-50%, -50%) rotate(0deg);
+      transform: rotate(0deg);
     }
 
     100% {
-      transform: translate(-50%, -50%) rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @media screen and (max-width: 452px) {
+    .spinner {
+      top: -45% !important;
+      left: 33% !important;
+      width: 113px;
+      height: 130px;
+    }
+  }
+
+  /* Mobile First Approach - Start with smallest screens */
+  @media screen and (max-width: 480px) {
+    .spinner {
+      top: -44.5% !important;
+      left: 31% !important;
+      width: 113px;
+      height: 130px;
+
+    }
+  }
+
+  /* Then medium screens */
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .spinner {
+      top: -45% !important;
+      left: 33% !important;
+
+    }
+  }
+
+  /* Then larger screens */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .spinner {
+      top: -44% !important;
+      left: 31% !important;
+
+    }
+  }
+
+  /* Largest screens */
+  @media screen and (min-width: 1025px) {
+    .spinner {
+      top: -42.5% !important;
+      left: 31% !important;
+
     }
   }
 </style>
@@ -420,11 +372,11 @@
       <!-- RIGHT ANIMATION -->
       <div class="hero-visual">
         <img src="images\Frame 29.png" class="here_img1" alt="">
-
-        <img src="images\Group 15.png" class="here_img2" alt="">
-        <img src="images\Gradient(1).png" class="class_imge1"
+        <img src="images/Group 15.png" class="here_img2" alt="">
+        <img src="images/Gradient(1).png" class="class_imge1"
           style="position: absolute; left: 33%; transform: rotate(180deg);" alt="">
       </div>
+
     </div>
     <div class="class_text"
       style="font-size: 272px; font-weight: 800; line-height: 100%; width: 100%; opacity: 0.8%; margin-top: -16%; margin-left: 5%;">
@@ -507,16 +459,10 @@
 
         <div class="why-card">
           <div class="why-card-content">
+            <img src="images/Loadings Shapes.svg" class="spinner" alt="Rotating Icon" />
 
-            <!-- Orbit with rotating icons -->
-            <div class="spinner-orbit">
-              <img src="images/topcircle.svg" alt="Rotating Icon 1" />
-              <img src="images/bottomcircle.svg" alt="Rotating Icon 2" />
-            </div>
-
-            <!-- Center icon -->
             <div class="why-icon"
-              style="border: 4px solid rgba(42, 175, 203, 1); border-radius: 50%; height: 56px; width: 56px; display: flex; justify-content: center; align-items: center; padding: 8px; z-index: 2;">
+              style="border: 4px solid rgba(42, 175, 203, 1); border-radius: 50%; height: 60px; width: 56px; display: flex; justify-content: center; align-items: center; padding: 8px; z-index: 2;">
               <img src="images/book1.svg" alt="Learn Icon" />
             </div>
 
@@ -528,12 +474,10 @@
 
         <div class="why-card">
           <div class="why-card-content">
-            <div class="spinner-orbit">
-              <img src="images/topcircle.svg" alt="Rotating Icon 1" />
-              <img src="images/bottomcircle.svg" alt="Rotating Icon 2" />
-            </div>
+            <img src="images/Loadings Shapes.svg" class="spinner" style="position: absolute; top: -42.5%; left: 31%;"
+              alt="Rotating Icon" />
             <div class="why-icon"
-              style="border: 4px solid rgba(42, 175, 203, 1); border-radius: 50%; height: 56px; width: 56px; display: flex ; justify-content: center; align-items: center; padding: 8px;">
+              style="border: 4px solid rgba(42, 175, 203, 1); border-radius: 50%; height: 60px; width: 56px; display: flex ; justify-content: center; align-items: center; padding: 8px;">
               <img src="images/setting1.svg" alt="Setting Icon" />
             </div>
             <h4 class="why-heading" style="margin-top: 5px;">Smart Tools That Actually Help</h4>
@@ -543,12 +487,9 @@
 
         <div class="why-card">
           <div class="why-card-content">
-            <div class="spinner-orbit">
-              <img src="images/topcircle.svg" alt="Rotating Icon 1" />
-              <img src="images/bottomcircle.svg" alt="Rotating Icon 2" />
-            </div>
+            <img src="images/Loadings Shapes.svg" class="spinner" alt="Rotating Icon" />
             <div class="why-icon"
-              style="border: 4px solid rgba(42, 175, 203, 1); border-radius: 50%; height: 56px; width: 56px; display: flex ; justify-content: center; align-items: center; padding: 8px;">
+              style="border: 4px solid rgba(42, 175, 203, 1); border-radius: 50%; height: 60px; width: 56px; display: flex ; justify-content: center; align-items: center; padding: 8px;">
               <img src="images/web1.svg" alt="Web 3 Icon" />
             </div>
             <h4 class="why-heading" style="margin-top: 5px;">A Scalable Web3 Ecosystem</h4>
@@ -558,12 +499,9 @@
 
         <div class="why-card">
           <div class="why-card-content">
-            <div class="spinner-orbit">
-              <img src="images/topcircle.svg" alt="Rotating Icon 1" />
-              <img src="images/bottomcircle.svg" alt="Rotating Icon 2" />
-            </div>
+            <img src="images/Loadings Shapes.svg" class="spinner" alt="Rotating Icon" />
             <div class="why-icon"
-              style="border: 4px solid rgba(42, 175, 203, 1); border-radius: 50%; height: 56px; width: 56px; display: flex ; justify-content: center; align-items: center; padding: 8px;">
+              style="border: 4px solid rgba(42, 175, 203, 1); border-radius: 50%; height: 56px; width: 60px; display: flex ; justify-content: center; align-items: center; padding: 8px;">
               <img src="images/earn1.svg" alt="Earn Icon" />
             </div>
             <h4 class="why-heading" style="margin-top: 5px;">Earn Through Knowledge</h4>
@@ -587,8 +525,12 @@
         Get ready for our official launch on the Play Store and App Store — coming soon!
       </p>
       <div class="launch-section__stores">
-        <button class="store-btn">Play Store <span>Coming Soon</span></button>
-        <button class="store-btn">App Store <span>Coming Soon</span></button>
+        <button class="store-btn">
+          <img src="images\Donwload Zero Koin App From Playstore.svg" style="height: 20px; width: 20px;" alt="">
+          Play Store <span>Coming Soon</span></button>
+        <button class="store-btn">
+          <img src="images\Donwload Zero Koin App From Appstore.svg" alt="">
+          App Store <span>Coming Soon</span></button>
       </div>
     </div>
 
@@ -619,9 +561,12 @@
               <h3>LIVE NOW</h3>
               <p>Initial listings, early community airdrops</p>
               <div class="brand-logos">
-                <div class="brandLogo" style="background-color: white;"><img src="images/livecoin1.svg" /></div>
-                <div class="brandLogo" style="background-color: white;"><img src="images/livecoin2.svg" /></div>
-                <div class="brandLogo" style="background-color: white;"><img src="images/livecoin3.svg" /></div>
+                <div class="brandLogo" style="background-color: white; padding: 5px;"><img src="images/livecoin2.svg" />
+                </div>
+                <div class="brandLogo" style="background-color: white; padding: 5px;"><img src="images/livecoin1.svg" />
+                </div>
+                <div class="brandLogo" style="background-color: white; padding: 5px;"><img src="images/livecoin3.svg" />
+                </div>
               </div>
               <div style="display: flex ; align-items: center; gap: 12px; width: 100%; justify-content: center;">
                 <div class="status-label live">✅ Live</div>
@@ -635,9 +580,12 @@
               <h3>Expansion</h3>
               <p>Growing traction, larger user base</p>
               <div class="brand-logos">
-                <div class="brandLogo" style="background-color: white;"><img src="images/xtexchange.svg" /></div>
-                <div class="brandLogo" style="background-color: white;"><img src="images/lbank.svg" /></div>
-                <div class="brandLogo" style="background-color: white;"><img src="images/mexc.svg" /></div>
+                <div class="brandLogo" style="background-color: white; padding: 5px;"><img
+                    src="images/xtexchange.svg" /></div>
+                <div class="brandLogo" style="background-color: white; padding: 5px;"><img src="images/lbank.svg" />
+                </div>
+                <div class="brandLogo" style="background-color: white; padding: 5px;"><img src="images/mexc.svg" />
+                </div>
               </div>
               <div class="status-label progress">⏳ In Progress</div>
             </div>
@@ -649,9 +597,12 @@
               <h3>Strategic Listings</h3>
               <p>Top-tier recognition and massive reach</p>
               <div class="brand-logos">
-                <div class="brandLogo" style="background-color: white;"><img src="images/binance.svg" /></div>
-                <div class="brandLogo" style="background-color: white;"><img src="images/Kucoin.svg" /></div>
-                <div class="brandLogo" style="background-color: white;"><img src="images/Bybit.svg" /></div>
+                <div class="brandLogo" style="background-color: white; padding: 5px;"><img
+                    src="images\binance-coin-bnb-seeklogo 1.svg" /></div>
+                <div class="brandLogo" style="background-color: white; padding: 5px;"><img src="images/Kucoin.svg" />
+                </div>
+                <div class="brandLogo" style="background-color: white; padding: 5px;"><img src="images/Bybit.svg" />
+                </div>
               </div>
               <div class="status-label upcoming">🔒 Upcoming</div>
             </div>
@@ -662,7 +613,7 @@
     <div class="yellow-shadmap"><img style="position: absolute; transform: rotate(180deg); left: -15%; bottom: -30%;"
         src="images/Gradient1.svg" alt=""></div>
     <div class="class_text2"
-      style="font-size: 272px; font-weight: 800; line-height: 100%; width: 100%; opacity: 1.5%; ">
+      style="font-size: 260px; font-weight: 800; line-height: 100%; width: 100%; opacity: 1.5%; ">
       ZEROKOIN</div>
   </section>
   <section class="documents-section">
@@ -698,20 +649,22 @@
     </div>
   </section>
   <section class="zero-koin-section-main">
+
     <h2 class="zero-koin-section-main__title">Zero Koin Token Info</h2>
 
     <div class="zero-koin-info-grid">
       <div class="zero-koin-info-grid__item">
         <div class="zero-koin-info-grid__item-icon">
-          <img src="images/zerocoinbox.svg" alt="Token Icon">
+          <img src="images\zerocoinbox.svg" alt="Token Icon">
+
           <div class="circle_icon"
-            style="position: absolute; top: -8px; left: -28%; animation: floatUpDown 4s ease-in-out infinite;">
+            style="position: absolute;top: -15px;left: -18%; animation: floatUpDown 4s ease-in-out infinite;">
             <img src="images/zaroiconcircle.svg" alt="Token circle">
           </div>
         </div>
         <div class="zero-koin-info-grid__item-content">
-          <span class="zero-koin-info-grid__item-label">Token Name</span>
-          <span class="zero-koin-info-grid__item-value">Zero Koin</span>
+          <span class="zero-koin-info-grid__item-label gradient-text ">Token Name</span>
+          <span class="zero-koin-info-grid__item-value gradient-text ">Zero Koin</span>
         </div>
       </div>
 
@@ -719,13 +672,13 @@
         <div class="zero-koin-info-grid__item-icon">
           <img src="images/thetercoin.svg" alt="Token Icon">
           <div class="circle_icon"
-            style="position: absolute; top: -8px; left: -28%; animation: floatUpDown 4s ease-in-out infinite;">
+            style="position: absolute;top: -15px;left: -18%; animation: floatUpDown 4s ease-in-out infinite;">
             <img src="images/thetercoincircle.svg" alt="Token circle">
           </div>
         </div>
         <div class="zero-koin-info-grid__item-content">
-          <span class="zero-koin-info-grid__item-label">Symbol</span>
-          <span class="zero-koin-info-grid__item-value">ZEROKOIN/USDT</span>
+          <span class="zero-koin-info-grid__item-label gradient-text">Symbol</span>
+          <span class="zero-koin-info-grid__item-value gradient-text">ZEROKOIN/USDT</span>
         </div>
       </div>
 
@@ -733,13 +686,13 @@
         <div class="zero-koin-info-grid__item-icon">
           <img src="images/supplybox.svg" alt="Token Icon">
           <div class="circle_icon"
-            style="position: absolute; top: -8px; left: -28%; animation: floatUpDown 4s ease-in-out infinite;">
+            style="position: absolute;top: -15px;left: -18%; animation: floatUpDown 4s ease-in-out infinite;">
             <img src="images/supplycircle.svg" alt="Token circle">
           </div>
         </div>
         <div class="zero-koin-info-grid__item-content">
-          <span class="zero-koin-info-grid__item-label">Total Supply</span>
-          <span class="zero-koin-info-grid__item-value">2,500,000,000</span>
+          <span class="zero-koin-info-grid__item-label gradient-text">Total Supply</span>
+          <span class="zero-koin-info-grid__item-value gradient-text">2,500,000,000</span>
         </div>
       </div>
 
@@ -747,13 +700,13 @@
         <div class="zero-koin-info-grid__item-icon">
           <img src="images/blockchainbox.svg" alt="Token Icon">
           <div class="circle_icon"
-            style="position: absolute; top: -8px; left: -28%; animation: floatUpDown 4s ease-in-out infinite;">
+            style="position: absolute;top: -15px;left: -18%; animation: floatUpDown 4s ease-in-out infinite;">
             <img src="images/blockchaincircle.svg" alt="Token circle">
           </div>
         </div>
         <div class="zero-koin-info-grid__item-content">
-          <span class="zero-koin-info-grid__item-label">Blockchain</span>
-          <span class="zero-koin-info-grid__item-value">Binance Smart Chain</span>
+          <span class="zero-koin-info-grid__item-label gradient-text">Blockchain</span>
+          <span class="zero-koin-info-grid__item-value gradient-text">Binance Smart Chain</span>
         </div>
       </div>
 
@@ -761,13 +714,14 @@
         <div class="zero-koin-info-grid__item-icon">
           <img src="images/addresbox.svg" alt="Token Icon">
           <div class="circle_icon"
-            style="position: absolute; top: -8px; left: -28%; animation: floatUpDown 4s ease-in-out infinite;">
+            style="position: absolute;top: -15px;left: -18%; animation: floatUpDown 4s ease-in-out infinite;">
             <img src="images/adresscircle.svg" alt="Token circle">
           </div>
         </div>
         <div class="zero-koin-info-grid__item-content">
-          <span class="zero-koin-info-grid__item-label">Contract Address</span>
-          <span class="zero-koin-info-grid__item-value zero-koin-info-grid__item-value--small">0x99349F73449b2BDFa631deF
+          <span class="zero-koin-info-grid__item-label gradient-text">Contract Address</span>
+          <span
+            class="zero-koin-info-grid__item-value zero-koin-info-grid__item-value--small gradient-text">0x99349F73449b2BDFa631deF
             <br>B0570df04afD70E97</span>
         </div>
       </div>
@@ -776,14 +730,14 @@
         <div class="zero-koin-info-grid__item-icon">
           <img src="images/livepricebox.svg">
           <div class="circle_icon"
-            style="position: absolute; top: -8px; left: -28%; animation: floatUpDown 4s ease-in-out infinite;">
+            style="position: absolute;top: -15px;left: -18%; animation: floatUpDown 4s ease-in-out infinite;">
             <img src="images/LivePriceCicle.svg" alt="Token circle">
           </div>
         </div>
         <div class="zero-koin-info-grid__item-content">
-          <span class="zero-koin-info-grid__item-label">Live Price</span>
-          <span class="zero-koin-info-grid__item-value zero-koin-info-grid__item-value--price">0.0031 <span
-              class="price-change">+4.2%</span></span>
+          <span class="zero-koin-info-grid__item-label gradient-text">Live Price</span>
+          <span class="zero-koin-info-grid__item-value zero-koin-info-grid__item-value--price gradient-text">0.0031
+            <span class="price-change gradient-text">+4.2%</span></span>
         </div>
       </div>
     </div>
@@ -802,12 +756,13 @@
     </div>
   </section>
   <section class="tokenomics-section-main">
-    <div class="tokenomics-section-main__header-left-aligned">
-      <h2 class="tokenomics-section-main__title-left-aligned">🚀 Tokenomics</h2>
-    </div>
+
     <div class="tokenomics-section-main__content-layout">
 
       <div class="tokenomics-section-main__text-content-left">
+        <div class="tokenomics-section-main__header-left-aligned">
+          <h2 class="tokenomics-section-main__title-left-aligned">🚀 Tokenomics</h2>
+        </div>
         <p>A balanced token distribution designed for growth and sustainability;</p>
         <ul>
           <li><span class="tokenomics-section-main__percentage">40% Community</span> – Rewards, staking, and user
@@ -830,14 +785,15 @@
       </div>
 
     </div>
+    <div class="yellow-shadwhy2"><img src="images\Gradient(4).png" style="position: relative; top: 3%;" alt=""></div>
+    <div class="yellow-shadwhy2"><img src="images\Gradient(3).png" style="margin-top: 500px;" alt=""></div>
+
   </section>
 
-  <section class="roadmap-section-main" style="position: relative;">
-    <div class="yellow-shadmap2"><img style="position: absolute; top: -78%; left: -7%; transform: rotate(180deg);"
-        src="images/Gradient1.svg" alt=""></div>
-    <div class="yellow-shadmap2"><img style="position: absolute; top: -15%; left: 0; transform: rotate(180deg);"
-        src="images/Gradient1.svg" alt=""></div>
-    <div class="container">
+
+  <section class="roadmap-section-main" style="">
+
+    <div class="" style="display: flex; justify-content: center; align-items: center;">
       <div class="koin-road-map-wrapper">
         <div class="koin-road-map">
           <h2 class="roadmap-section-main__title">Zero Koin Roadmap</h2>
@@ -892,8 +848,9 @@
   </section>
 
 
+
   <section class="download-section-main">
-    <div class="sectiontop-border-circle" id="scrollToTopBtn">
+    <div class="sectiontop-border-circle" style="z-index: 1;" id="scrollToTopBtn">
       <div class="download-section-main__scroll-to-top">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up">
@@ -908,7 +865,8 @@
       class="download-section-main__floating-icon download-section-main__floating-icon--right">
 
     <h2 class="download-section-main__title">Download Now</h2>
-    <p class="download-section-main__description">Join thousands already learning and earning with Zero Koin.</p>
+    <p class="download-section-main__description">Join thousands already learning and earning with Zero Koin.
+    </p>
 
     <div class="download-section-main__buttons">
       <a href="#" class="download-button download-button--google-play">
@@ -930,28 +888,31 @@
         </a>
       </div>
       <nav class="site-footer__nav">
-        <a href="#" class="site-footer__nav-link">Home</a>
+        <!-- <a href="#" class="site-footer__nav-link">Home</a>
         <a href="#" class="site-footer__nav-link">Download DApp</a>
-        <a href="#" class="site-footer__nav-link">About us</a>
+        <a href="#" class="site-footer__nav-link">About us</a> -->
+        <a href="index.html" class="site-footer__nav-link" style="position: relative; z-index: 1;">Home</a>
+        <a href="downloadapp.html" class="site-footer__nav-link">Download DApp</a>
+        <a href="aboutus.html" class="site-footer__nav-link">About us</a>
       </nav>
       <div class="site-footer__socials">
         <span class="site-footer__socials-label">Follow us</span>
         <div class="site-footer__social-icons">
-          <a href="#" class="site-footer__social-icon-btn">
+          <a href="https://facebook.com" class="site-footer__social-icon-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
               stroke="none">
               <path
                 d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.58-1.333h2.42v-5h-3.827c-3.268 0-4.173 1.39-4.173 4.4v2.6z" />
             </svg>
           </a>
-          <a href="#" class="site-footer__social-icon-btn">
+          <a href="https://instagram.com" class="site-footer__social-icon-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
               stroke="none">
               <path
                 d="M12 2.163c3.204 0 3.584.012 4.85.07c3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.148 3.252-1.691 4.771-4.919 4.919-.265.058-.655.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.645-.07-4.85s.012-3.584.07-4.85c.148-3.252 1.691-4.771 4.919-4.919.265-.058.655-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.668.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.073 4.948.073s3.668-.014 4.947-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.979-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.442.646-1.442 1.442s.646 1.442 1.442 1.442 1.442-.646 1.442-1.442-.646-1.442-1.442-1.442z" />
             </svg>
           </a>
-          <a href="#" class="site-footer__social-icon-btn">
+          <a href="https://discord.com" class="site-footer__social-icon-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
               stroke="none">
               <path
@@ -963,11 +924,11 @@
       <a href="#" class="site-footer__download-btn">Download Now</a>
     </div>
     <div class="site-footer__bottom-line-wrapper"></div>
-
+    <div class="site-footer__copyright">
+      <span class="site-footer__copyright-text">© ZeroKoin2025</span>
+    </div>
   </footer>
-  <div class="site-footer__copyright">
-    <span class="site-footer__copyright-text">© ZeroKoin2020</span>
-  </div>
+
 
 
   <script src="js/script.js"></script>

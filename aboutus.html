@@ -11,6 +11,15 @@
 </head>
 
 <style>
+    @media screen and (max-width:500px) {
+        .phone-wrap {
+            position: relative;
+            top: -68px;
+            right: 34%;
+
+        }
+    }
+
     .container_box {
         margin: 30px 130px;
     }
@@ -47,6 +56,7 @@
         left: 4%;
         z-index: 999;
         overflow: visible;
+        margin-top: 0;
     }
 
     @media screen and (max-width:1379px) {
@@ -56,6 +66,15 @@
         }
 
     }
+
+      @media screen and (max-width:500px) {
+        .launch-section {
+            margin-top: 18%;
+        }
+
+    }
+
+
 
     .launch-section__visual {
         display: flex;
@@ -109,6 +128,8 @@
             font-size: 14px;
         }
     }
+
+
 
     .about-us-section .about-container {
         display: grid;
@@ -373,7 +394,7 @@
     </section>
 
     <section class="download-section-main">
-        <div class="sectiontop-border-circle" id="scrollToTopBtn">
+        <div class="sectiontop-border-circle" style="z-index: 1;" id="scrollToTopBtn">
             <div class="download-section-main__scroll-to-top">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up">
@@ -387,16 +408,17 @@
         <img src="images/earn.svg" alt="Coins Icon"
             class="download-section-main__floating-icon download-section-main__floating-icon--right">
 
-        <h2 class="download-section-main__title">Join the Revolution</h2>
-        <p class="download-section-main__description">Every revolution begins from Zero. This is your moment to be
-            early, to be informed, and to be rewarded.</p>
-        <div class="joining-buttons">
-            <div class="btn1" style="">
-                Start Mining</div>
-            <div class="btn2" style="">
-                Download DApp</div>
-            <div class="btn3" style="">
-                Learn & Earn</div>
+        <h2 class="download-section-main__title">Download Now</h2>
+        <p class="download-section-main__description">Join thousands already learning and earning with Zero Koin.
+        </p>
+
+        <div class="download-section-main__buttons">
+            <a href="#" class="download-button download-button--google-play">
+                <img src="images/googleplay.svg" />
+            </a>
+            <a href="#" class="download-button download-button--app-store">
+                <img src="images/applestore.svg" />
+            </a>
         </div>
     </section>
     <footer class="site-footer">

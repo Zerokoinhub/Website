@@ -47,7 +47,7 @@
 
     @media screen and (max-width:1400px) {
         .launch-section {
-            margin-top: 0;
+            margin-top: 15%;
         }
     }
 
@@ -55,6 +55,38 @@
         .top_gradient {
             display: none;
         }
+    }
+
+    @media screen and (max-width:500px) {
+        .key-features {
+            margin-top: -2%;
+        }
+    }
+
+    .head {
+        padding: 44px 3rem;
+    }
+
+    @media screen and (max-width:423px) {
+        .head {
+            padding: 10px 1.4rem;
+        }
+    }
+
+    @media screen and (max-width:600px) {
+        .launch-section .coin-1 {
+            position: absolute;
+            top: 13%;
+            left: 0;
+            width: 100px;
+            height: 100px;
+        }
+
+        .launch-section .coin-2 {
+            width: 100px;
+            height: 100px;
+        }
+
     }
 </style>
 
@@ -64,7 +96,7 @@
             <img src="images\Gradient(1).png" alt="">
         </div>
 
-        <div class="container" style="padding: 44px 3rem;">
+        <div class="container head">
             <nav class="header-nav-bar">
                 <div class="logo">
                     <a href="index.html" style="cursor: pointer;">
@@ -74,7 +106,7 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="downloadpage.html">Download DApp</a></li>
+                    <li><a href="downloadapp.html">Download DApp</a></li>
                     <li><a href="aboutus.html">About us</a></li>
                 </ul>
             </nav>
@@ -222,7 +254,7 @@
             </div>
         </div>
         <section class="download-section-main">
-            <div class="sectiontop-border-circle" id="scrollToTopBtn">
+            <div class="sectiontop-border-circle" style="z-index: 1;" id="scrollToTopBtn">
                 <div class="download-section-main__scroll-to-top">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
