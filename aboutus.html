@@ -56,7 +56,7 @@
         left: 4%;
         z-index: 999;
         overflow: visible;
-        margin-top: 0;
+        margin-top: -6%;
     }
 
     @media screen and (max-width:1379px) {
@@ -238,6 +238,12 @@
         font-weight: 600;
         padding: 15px 30px;
     }
+
+    @media screen and (max-width:500px) {
+        .download-section-main__floating-icon--left {
+            /* position: absolute; */
+        }
+    }
 </style>
 
 <body>
@@ -249,8 +255,8 @@
             <nav class="header-nav-bar">
                 <div class="logo">
                     <a href="index.html" style="cursor: pointer;">
-                        <img src="images/site-logo.svg" alt="Zero Koin" />
-                        <span style="position: relative;  top: -9px;  left: 3px;">ZERO KOIN</span>
+                        <img src="images\Logo Zero Koin.svg" alt="Zero Koin" />
+                        <span style="position: relative;  top: -6px;  left: 3px;">ZERO KOIN</span>
                     </a>
                 </div>
                 <ul class="nav-links">
@@ -261,11 +267,11 @@
             </nav>
         </div>
     </header>
-    <div class="zerokoin-text  class_text" style="height: 215px; width: 1320px; position: absolute; left: 7%;">
-        <img src="images/ZEROKOIN.svg" style="width: 100%;" />
-    </div>
+    <div class="class_text2"
+        style="font-size: 260px; font-weight: 800; line-height: 100%; width: 100%; opacity: 1.5%; position: absolute;left: 2%; ">
+        ZEROKOIN</div>
 
-    <section class="main launch-section download-page" style="">
+    <section class="main launch-section download-page" style="position: relative; ">
         <div class="launch-section__content">
             <h2 class="launch-section__heading">About Us</h2>
             <p class="launch-section__subtext">
@@ -384,7 +390,7 @@
     </section>
 
     <section class="download-section-main">
-        <div class="sectiontop-border-circle" style="z-index: 1;" id="scrollToTopBtn">
+        <div class="sectiontop-border-circle" id="scrollToTopBtn">
             <div class="download-section-main__scroll-to-top">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up">
@@ -398,26 +404,29 @@
         <img src="images/earn.svg" alt="Coins Icon"
             class="download-section-main__floating-icon download-section-main__floating-icon--right">
 
-        <h2 class="download-section-main__title">Download Now</h2>
-        <p class="download-section-main__description">Join thousands already learning and earning with Zero Koin.
-        </p>
-
-        <div class="download-section-main__buttons">
-            <a href="#" class="download-button download-button--google-play">
-                <img src="images/googleplay.svg" />
-            </a>
-            <a href="#" class="download-button download-button--app-store">
-                <img src="images/applestore.svg" />
-            </a>
+        <h2 class="download-section-main__title">Join the Revolution</h2>
+        <p class="download-section-main__description">Every revolution begins from Zero. This is your moment to be early, to be informed, and to be rewarded.</p>
+        <div class="joining-buttons">
+            <div class="btn" style="color: black; border-radius: 999999px; background: linear-gradient(90deg, #22D3EE 0%, #38BDF8 100%);
+ box-shadow: 0px 20px 25px 0px #0000001A; box-shadow: 0px 8px 10px 0px #0000001A; font-weight: 700; cursor: pointer;">
+                Start Mining</div>
+            <div class="btn"
+                style="color: black; border-radius: 999999px; background: linear-gradient(90deg, #FFFFFF 0%, #716972 100%); box-shadow: 0px 20px 25px 0px #0000001A; box-shadow: 0px 8px 10px 0px #0000001A; font-weight: 700; cursor: pointer;">
+                Download DApp</div>
+            <div class="btn"
+                style="color: black; border-radius: 999999px; background: linear-gradient(90deg, #FBBF24 0%, #FDE047 100%); box-shadow: 0px 20px 25px 0px #0000001A; box-shadow: 0px 8px 10px 0px #0000001A; font-weight: 700; cursor: pointer;">
+                Learn & Earn</div>
         </div>
     </section>
+
+
     <footer class="site-footer">
         <div class="site-footer__top-border-glow"></div>
         <div class="site-footer__content-wrapper container">
             <div class="logo footer-logo">
-                <a href="Homepage.html" style="cursor: pointer;">
-                    <img src="images\Zero Koin Daimond.svg" alt="Zero Koin" />
-                    <span>ZERO KOIN</span>
+                <a href="index.html" style="cursor: pointer;">
+                    <img src="images\Logo Zero Koin.svg" alt="Zero Koin" />
+                    <span style="position: relative;  top: -3px;  left: 3px;">ZERO KOIN</span>
                 </a>
             </div>
             <nav class="site-footer__nav">

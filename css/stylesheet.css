@@ -1010,9 +1010,15 @@ ul {
 }
 
 .launch-section .launch-section__heading {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 800;
   margin-bottom: 1rem;
+
+  background: linear-gradient(90deg, #FFFFFF 0%, #999999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .launch-section .launch-section__desc {
@@ -1210,7 +1216,7 @@ ul {
 .tier-icon {
   background: rgba(37, 31, 11, 1);
   padding: 12px;
-  border-radius: 9999px;
+  border-radius: 100%;
   display: flex;
   justify-content: center;
   position: absolute;
@@ -1240,7 +1246,12 @@ ul {
 
 .section-title {
   font-size: 2rem;
-  color: #ffffff;
+  background: linear-gradient(90deg, #FFFFFF 0%, #999999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* For Firefox */
+  background-clip: text;
+  color: transparent;
   margin-bottom: 60px;
 }
 
@@ -1449,7 +1460,12 @@ ul {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 136px;
-  color: #ffffff;
+  background: linear-gradient(90deg, #FFFFFF 0%, #999999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* For Firefox */
+  background-clip: text;
+  color: transparent;
 }
 
 .docs-content p {
@@ -1549,8 +1565,14 @@ ul {
 
 .zero-koin-section-main__title {
   font-size: 2.2em;
-  margin-bottom: 55px;
-  color: var(--text-color);
+  margin-bottom: 125px;
+  background: linear-gradient(90deg, #FFFFFF 0%, #999999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* For Firefox */
+  background-clip: text;
+  color: transparent;
+
 }
 
 .zero-koin-info-grid {
@@ -1652,7 +1674,12 @@ ul {
   line-height: 100%;
   margin-top: 60px;
   margin-bottom: 38px;
-  color: var(--text-color);
+  background: linear-gradient(90deg, #FFFFFF 0%, #999999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* For Firefox */
+  background-clip: text;
+  color: transparent;
 }
 
 .zero-koin-utility-grid {
@@ -2019,7 +2046,12 @@ ul {
 .roadmap-section-main__title {
   font-size: 2.5em;
   text-align: center;
-  color: var(--text-color);
+
+  background: linear-gradient(90deg, #FFFFFF 0%, #999999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   margin-bottom: 50px;
 }
 
@@ -2224,8 +2256,10 @@ ul {
   font-size: 40px;
   font-weight: 800;
   background: linear-gradient(90deg, #FFFFFF 0%, #999999 100%);
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent;
   margin-bottom: 20px;
   position: relative;
   z-index: 2;
@@ -2503,6 +2537,12 @@ ul {
   }
 }
 
+@media screen and (max-width:600px) {
+  .download-section-main__floating-icon--left {
+    left: 7%;
+  }
+}
+
 /* Footer Specific Variables (adjust if needed) */
 :root {
   --footer-bg-color: #1a1e2a;
@@ -2730,7 +2770,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 24px;
+  font-size: 19px;
   font-weight: 700;
   line-height: 100%;
 }
