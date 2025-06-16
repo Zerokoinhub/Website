@@ -34,7 +34,7 @@
         flex-wrap: wrap;
         position: relative;
         overflow: hidden;
-        margin-top: -8%;
+        margin-top: -10%;
     }
 
     @media screen and (max-width:1100px) {
@@ -88,20 +88,25 @@
         }
 
     }
+    .launch-section__content{
+        margin-top: -26%;
+    }
 </style>
 
 <body>
     <header>
-        <div class="top_gradient" style="position: absolute; left: -18%; top: -600px;">
+        <div class="top_gradient" style="position: absolute; left: -18%; top: -600px; z-index: -1;">
             <img src="images\Gradient(1).png" alt="">
         </div>
 
-        <div class="container head">
+        <div class="container head" style="position: relative; z-index: 1;">
             <nav class="header-nav-bar">
                 <div class="logo">
                     <a href="index.html" style="cursor: pointer;">
                         <img src="images/site-logo.svg" alt="Zero Koin" />
-                        <span>ZERO KOIN</span>
+                        <span
+                        style="position: relative;  top: -9px;  left: 3px;"
+                        >ZERO KOIN</span>
                     </a>
                 </div>
                 <ul class="nav-links">
@@ -112,7 +117,7 @@
             </nav>
         </div>
     </header>
-    <div style="position: relative; margin-top: 2%; ">
+    <div style="position: relative; margin-top: 0%; ">
         <div class="zerokoin-text class_imge1" style="height: 215px; width: 1320px; margin-left: 7%;">
             <img src="images/ZEROKOIN.svg" style="width: 100%;" />
         </div>
@@ -139,15 +144,11 @@
                 <div class="launch-section__mobile">
                     <img src="images/MOCKUPmobile.svg" alt="Mobile Screen" class="mobile-screen">
                 </div>
-                <!-- <img src="images/Gradient4zerolan.svg" alt="Coin" class="floating-coin gradiant-shadow"> -->
-                <img src="images/orangecoin.svg" alt="Coin" class="floating-coin coin-1"
-                    style="top: -10%; left: 11%;" />
-                <img src="images/silvercoin.svg" alt="Coin" class="floating-coin coin-2"
-                    style="top: -15%; right: 6px;" />
-                <img src="images/theracoin.svg" alt="Coin" class="floating-coin coin-3"
-                    style="bottom: 9%; left: 49%;" />
-                <img src="images/goldline.svg" alt="Coin" class="floating-coin coin-4"
-                    style="bottom: -2%; right: 82%;" />
+                <img src="images/Gradient4zerolan.svg" alt="Coin" class="floating-coin gradiant-shadow">
+                <img src="images/orangecoin.svg" alt="Coin" class="floating-coin coin-1">
+                <img src="images/silvercoin.svg" alt="Coin" class="floating-coin coin-2">
+                <img src="images/theracoin.svg" alt="Coin" class="floating-coin coin-3">
+                <img src="images/goldline.svg" alt="Coin" class="floating-coin coin-4">
             </div>
         </section>
         <section class="key-features">
@@ -168,7 +169,7 @@
                     <div class="features-card">
                         <div class="featured-icon">
                             <div class="img-top-back"></div>
-                            <img src="images/featured2.svg" />
+                            <img src="images\Real world rewards.svg" style="height: 55px; width: 56.5px;" />
                         </div>
                         <div class="featured-about">
                             <h3>Real-World Rewards</h3>
@@ -287,46 +288,82 @@
             <div class="site-footer__content-wrapper container">
                 <div class="logo footer-logo">
                     <a href="Homepage.html" style="cursor: pointer;">
-                        <img src="images/site-logo.svg" alt="Zero Koin" />
+                        <img src="images\Zero Koin Daimond.svg" alt="Zero Koin" />
                         <span>ZERO KOIN</span>
                     </a>
                 </div>
                 <nav class="site-footer__nav">
-                    <a href="#" class="site-footer__nav-link">Home</a>
-                    <a href="#" class="site-footer__nav-link">Download DApp</a>
-                    <a href="#" class="site-footer__nav-link">About us</a>
+                    <a href="index.html" class="site-footer__nav-link" style="position: relative; z-index: 1;">Home</a>
+                    <a href="downloadapp.html" class="site-footer__nav-link">Download DApp</a>
+                    <a href="aboutus.html" class="site-footer__nav-link">About us</a>
                 </nav>
                 <div class="site-footer__socials">
                     <span class="site-footer__socials-label">Follow us</span>
                     <div class="site-footer__social-icons">
-                        <a href="#" class="site-footer__social-icon-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="currentColor" stroke="none">
+                        <a href="https://twiter.com" class="site-footer__social-icon-btn">
+                            <svg height="20" version="1.1" viewBox="0 0 512 512" width="100%" fill="none"
+                                xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                                <rect height="400" width="400" x="56" y="56"></rect>
                                 <path
-                                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.58-1.333h2.42v-5h-3.827c-3.268 0-4.173 1.39-4.173 4.4v2.6z" />
+                                    d="M161.014,464.013c193.208,0 298.885,-160.071 298.885,-298.885c0,-4.546 0,-9.072 -0.307,-13.578c20.558,-14.871 38.305,-33.282 52.408,-54.374c-19.171,8.495 -39.51,14.065 -60.334,16.527c21.924,-13.124 38.343,-33.782 46.182,-58.102c-20.619,12.235 -43.18,20.859 -66.703,25.498c-19.862,-21.121 -47.602,-33.112 -76.593,-33.112c-57.682,0 -105.145,47.464 -105.145,105.144c0,8.002 0.914,15.979 2.722,23.773c-84.418,-4.231 -163.18,-44.161 -216.494,-109.752c-27.724,47.726 -13.379,109.576 32.522,140.226c-16.715,-0.495 -33.071,-5.005 -47.677,-13.148l0,1.331c0.014,49.814 35.447,93.111 84.275,102.974c-15.464,4.217 -31.693,4.833 -47.431,1.802c13.727,42.685 53.311,72.108 98.14,72.95c-37.19,29.227 -83.157,45.103 -130.458,45.056c-8.358,-0.016 -16.708,-0.522 -25.006,-1.516c48.034,30.825 103.94,47.18 161.014,47.104"
+                                    style="fill:#ffffff;fill-rule:nonzero"></path>
                             </svg>
                         </a>
-                        <a href="#" class="site-footer__social-icon-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="currentColor" stroke="none">
-                                <path
-                                    d="M12 2.163c3.204 0 3.584.012 4.85.07c3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.148 3.252-1.691 4.771-4.919 4.919-.265.058-.655.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.645-.07-4.85s.012-3.584.07-4.85c.148-3.252 1.691-4.771 4.919-4.919.265-.058.655-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.668.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.073 4.948.073s3.668-.014 4.947-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.979-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.442.646-1.442 1.442s.646 1.442 1.442 1.442 1.442-.646 1.442-1.442-.646-1.442-1.442-1.442z" />
+                        <a href="https://telegram.com" class="site-footer__social-icon-btn">
+                            <svg height="20" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="_x33_35-telegram">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M484.689,98.231l-69.417,327.37c-5.237,23.105-18.895,28.854-38.304,17.972L271.2,365.631     l-51.034,49.086c-5.646,5.647-10.371,10.372-21.256,10.372l7.598-107.722L402.539,140.23c8.523-7.598-1.848-11.809-13.247-4.21     L146.95,288.614L42.619,255.96c-22.694-7.086-23.104-22.695,4.723-33.579L455.423,65.166     C474.316,58.081,490.85,69.375,484.689,98.231z"
+                                                style="fill:white"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                                <g id="Layer_1"></g>
                             </svg>
                         </a>
-                        <a href="#" class="site-footer__social-icon-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="currentColor" stroke="none">
-                                <path
-                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 6.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 3.772-8.601 8.399-8.601s8.601 3.931 8.601 8.601v8.399h4.968v-9.135c0-6.004-4.135-9.865-9.865-9.865z" />
+
+                        <a href="https://discord.com" class="site-footer__social-icon-btn">
+                            <svg height="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <title></title>
+                                <path fill="#ffffff"
+                                    d="M20.222 0c1.406 0 2.54 1.137 2.607 2.475V24l-2.677-2.273-1.47-1.338-1.604-1.398.67 2.205H3.71c-1.402 0-2.54-1.065-2.54-2.476V2.48C1.17 1.142 2.31.003 3.715.003h16.5L20.222 0zm-6.118 5.683h-.03l-.202.2c2.073.6 3.076 1.537 3.076 1.537-1.336-.668-2.54-1.002-3.744-1.137-.87-.135-1.74-.064-2.475 0h-.2c-.47 0-1.47.2-2.81.735-.467.203-.735.336-.735.336s1.002-1.002 3.21-1.537l-.135-.135s-1.672-.064-3.477 1.27c0 0-1.805 3.144-1.805 7.02 0 0 1 1.74 3.743 1.806 0 0 .4-.533.805-1.002-1.54-.468-2.14-1.404-2.14-1.404s.134.066.335.2h.06c.03 0 .044.015.06.03v.006c.016.016.03.03.06.03.33.136.66.27.93.4.466.202 1.065.403 1.8.536.93.135 1.996.2 3.21 0 .6-.135 1.2-.267 1.8-.535.39-.2.87-.4 1.397-.737 0 0-.6.936-2.205 1.404.33.466.795 1 .795 1 2.744-.06 3.81-1.8 3.87-1.726 0-3.87-1.815-7.02-1.815-7.02-1.635-1.214-3.165-1.26-3.435-1.26l.056-.02zm.168 4.413c.703 0 1.27.6 1.27 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334.002-.74.573-1.338 1.27-1.338zm-4.543 0c.7 0 1.266.6 1.266 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334 0-.74.57-1.338 1.27-1.338z">
+                                </path>
+                                <linearGradient id="paint0_linear_31_1333" x1="12.8371" y1="28.3301" x2="22.9768"
+                                    y2="22.468" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.477043" stop-color="#23CAEA"></stop>
+                                    <stop offset="1" stop-color="#0680B7"></stop>
+                                </linearGradient>
                             </svg>
                         </a>
+
+                        <a href="https://raddit.com" class="site-footer__social-icon-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-reddit" viewBox="0 0 16 16">
+                                <path
+                                    d="M6.167 8a.83.83 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661m1.843 3.647c.315 0 1.403-.038 1.976-.611a.23.23 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83s.83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.2.2 0 0 0-.153.028.2.2 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224q-.03.17-.029.353c0 1.795 2.091 3.256 4.669 3.256s4.668-1.451 4.668-3.256c0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165" />
+                            </svg>
+                        </a>
+
+                        <a href="https://github.com" class="site-footer__social-icon-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-github" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                            </svg>
+                        </a>
+
                     </div>
                 </div>
                 <a href="#" class="site-footer__download-btn">Download Now</a>
             </div>
             <div class="site-footer__bottom-line-wrapper"></div>
             <div class="site-footer__copyright">
-                <span class="site-footer__copyright-text">© ZeroKoin2020</span>
+                <span class="site-footer__copyright-text">© ZeroKoin2025</span>
             </div>
         </footer>
     </div>
