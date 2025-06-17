@@ -322,7 +322,7 @@ ul {
 .hero-section .here_img1 {
   width: 645px;
   height: 700px;
-  margin-left: 88%;
+  margin-left: 95%;
   margin-top: -3%;
 }
 
@@ -732,30 +732,38 @@ ul {
   z-index: 3;
 }
 
-.orbit-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  /* control size for desktop */
-  height: auto;
-  aspect-ratio: 1 / 1;
-  margin: auto;
+/* Base coin styles */
+.coin_silver,
+.coin_silver2 {
+  position: absolute;
+  width: 50px;
+  /* Reduced from 100px */
+  height: 50px;
+  /* Reduced from 100px */
 }
 
+/* First coin animation */
 .coin_silver {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-
-  /* Make the element follow the vertical arc path */
-  offset-path: path("M 300,400 A 100 200 0 0 1 300,0");
+  /* Adjust path for smaller screens */
+  offset-path: path("M 150,200 A 50 100 0 0 1 150,0");
   offset-distance: 0%;
   animation: moveVerticallyOnPath 3s ease-in-out infinite alternate;
-  top: 20%;
-  left: 13%;
+  top: 18%;
+  left: 17%;
   transform: rotate(-270deg);
 }
 
+/* Second coin animation */
+.coin_silver2 {
+  /* Adjust path for smaller screens */
+  offset-path: path("M 150,150 a 75 100 0 1 1 -1 0");
+  offset-distance: 0%;
+  animation: orbitCoin 6s linear infinite;
+  top: -20%;
+  left: 50%;
+}
+
+/* Keyframes remain the same */
 @keyframes moveVerticallyOnPath {
   0% {
     offset-distance: 0%;
@@ -764,21 +772,6 @@ ul {
   100% {
     offset-distance: 90%;
   }
-}
-
-
-
-
-.coin_silver2 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-
-  offset-path: path("M 300,300 a 150 200 0 1 1 -1 0");
-  offset-distance: 0%;
-  animation: orbitCoin 6s linear infinite;
-  top: -23%;
-  left: 45%;
 }
 
 @keyframes orbitCoin {
@@ -791,23 +784,54 @@ ul {
   }
 }
 
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
 
-
-
-
-/* Make it smaller on small screens */
-@media (max-width: 768px) {
-  .coin_silver {
-    width: 40px;
-    height: 40px;
+  .coin_silver,
+  .coin_silver2 {
+    width: 75px;
+    height: 75px;
   }
 
-  .orbit-wrapper {
-    max-width: 250px;
+  .coin_silver {
+    offset-path: path("M 225,300 A 75 150 0 0 1 225,0");
+    top: 18%;
+    left: 12%;
+  }
+
+  .coin_silver2 {
+    offset-path: path("M 225,225 a 112.5 150 0 1 1 -1 0");
+    top: -20%;
+    left: 43%;
   }
 }
 
+@media (min-width: 1024px) {
 
+  .coin_silver,
+  .coin_silver2 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .coin_silver {
+    offset-path: path("M 300,400 A 100 200 0 0 1 300,0");
+
+  }
+
+  .coin_silver2 {
+    offset-path: path("M 300,300 a 150 200 0 1 1 -1 0");
+
+  }
+}
+
+/* Adjust SVG container */
+.orbit-svg {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
 
 .about-us-section .coin-top {
@@ -1176,8 +1200,8 @@ ul {
     position: absolute;
     top: 13%;
     left: 0;
-    width: 300px;
-    height: 300px;
+    width: 323px;
+    height: 392px;
   }
 
 }
@@ -1220,7 +1244,7 @@ ul {
   .launch-section .coin-1 {
     position: absolute;
     top: 13%;
-    left: 0;
+    left: 50px;
     width: 100px;
     height: 100px;
   }
@@ -1232,8 +1256,8 @@ ul {
 @media screen and (max-width:600px) {
   .floating-coin.coin-4 {
     position: absolute;
-    bottom: 2%;
-    left: 0;
+    bottom: -1%;
+    left: -41px;
     width: 100px;
     height: 100px;
   }
