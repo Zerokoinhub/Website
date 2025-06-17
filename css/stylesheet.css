@@ -321,7 +321,7 @@ ul {
 
 .hero-section .here_img1 {
   width: 645px;
-  height: 700px;
+  height: auto;
   margin-left: 95%;
   margin-top: -3%;
 }
@@ -337,7 +337,7 @@ ul {
 
 @media screen and (max-width:1400px) {
   .hero-section .here_img1 {
-    width: 400px;
+    /* width: 400px; */
     height: auto;
     margin-left: 0px;
   }
