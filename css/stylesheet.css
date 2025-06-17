@@ -322,7 +322,7 @@ ul {
 .hero-section .here_img1 {
   width: 645px;
   height: 700px;
-  margin-left: 68%;
+  margin-left: 88%;
   margin-top: -3%;
 }
 
@@ -503,12 +503,33 @@ ul {
   box-shadow: 0px 0px 10px 0px #2AAFCB;
   transition: all 0.3s ease;
   backdrop-filter: blur(4px);
+  position: relative;
+  overflow: hidden;
+  /* This will hide the overflowing gradient */
+}
+
+.hero-section .hero-buttons .btn.border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  /* Start with 0 width */
+  height: 100%;
+  background: linear-gradient(90deg, #058AAD 0%, #01BBED 41%, #00CAFF 79%);
+  transition: width 0.5s ease-in-out;
+  /* Animate the width */
+  z-index: -1;
 }
 
 .hero-section .hero-buttons .btn.border:hover {
-  background: linear-gradient(90deg, #058AAD 0%, #01BBED 41%, #00CAFF 79%);
   transform: scale(1.03);
   color: white;
+}
+
+.hero-section .hero-buttons .btn.border:hover::before {
+  width: 100%;
+  /* Expand to full width on hover */
 }
 
 /* CIRCLE + COINS */
@@ -711,6 +732,84 @@ ul {
   z-index: 3;
 }
 
+.orbit-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  /* control size for desktop */
+  height: auto;
+  aspect-ratio: 1 / 1;
+  margin: auto;
+}
+
+.coin_silver {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+
+  /* Make the element follow the vertical arc path */
+  offset-path: path("M 300,400 A 100 200 0 0 1 300,0");
+  offset-distance: 0%;
+  animation: moveVerticallyOnPath 3s ease-in-out infinite alternate;
+  top: 20%;
+  left: 13%;
+  transform: rotate(-270deg);
+}
+
+@keyframes moveVerticallyOnPath {
+  0% {
+    offset-distance: 0%;
+  }
+
+  100% {
+    offset-distance: 90%;
+  }
+}
+
+
+
+
+.coin_silver2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+
+  offset-path: path("M 300,300 a 150 200 0 1 1 -1 0");
+  offset-distance: 0%;
+  animation: orbitCoin 6s linear infinite;
+  top: -23%;
+  left: 45%;
+}
+
+@keyframes orbitCoin {
+  0% {
+    offset-distance: 0%;
+  }
+
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+
+
+
+
+/* Make it smaller on small screens */
+@media (max-width: 768px) {
+  .coin_silver {
+    width: 40px;
+    height: 40px;
+  }
+
+  .orbit-wrapper {
+    max-width: 250px;
+  }
+}
+
+
+
+
 .about-us-section .coin-top {
   top: -19%;
   left: -39%;
@@ -748,17 +847,6 @@ ul {
   }
 }
 
-@keyframes floatUpDown {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-15px);
-  }
-}
 
 .about-us-section .about-right {
   flex: 1;
@@ -1063,7 +1151,7 @@ ul {
 .launch-section .launch-section__visual {
   position: relative;
   height: 500px;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .launch-section .launch-section__mobile {
@@ -1137,10 +1225,7 @@ ul {
     height: 100px;
   }
 
-  .launch-section .coin-2 {
-    width: 100px;
-    height: 100px;
-  }
+
 
 }
 
@@ -2292,7 +2377,7 @@ ul {
 .download-section-main__floating-icon--right {
   right: 10%;
   /* Position on the right side */
-  top: 88%;
+  top: 92%;
   transform: translateY(-50%);
   animation-delay: 1.5s;
   /* Stagger animation for visual variety */

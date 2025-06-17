@@ -27,11 +27,10 @@
     margin-top: -8%;
   }
 
-  @media screen and (max-width:1300px) {
+  @media screen and (max-width:1400px) {
     .hero-section {
-      margin-top: 0;
+      margin-top: 8%;
     }
-
   }
 
   .hero-section .hero-container {
@@ -39,6 +38,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 4%;
+    gap: 50px;
   }
 
 
@@ -437,6 +437,28 @@
       left: 26%;
     }
   }
+
+  .launch-section .coin-2 {
+    z-index: 1;
+  }
+
+  @media screen and (max-width:600px) {
+    .launch-section .launch-section__visual {
+      left: 5%;
+    }
+
+    .launch-section .coin-2 {
+      width: 100px;
+      height: 100px;
+    }
+
+    .launch-section .coin-3 {
+      width: 100px;
+      height: 100px;
+      bottom: 20px;
+      left: 50%;
+    }
+  }
 </style>
 
 <body>
@@ -494,11 +516,29 @@
 
       <!-- RIGHT ANIMATION -->
       <div class="hero-visual">
-        <!-- <img src="images\Banner Left Side.svg" class="here_img1" alt="">
-          <img src="images\Zero Koin Silver.svg" class="coin_silver" style="position: absolute; top: 14%; height: 100px; width: 100px; right: 37%;" alt="">
-          <img src="images\Zero Koin Gold.svg" class="coin_silver" style="position: absolute; top: 14%; height: 100px; width: 100px; right: 21%; top: 40%;" alt=""> -->
+        <img src="images\Banner Left Side.svg" class="here_img1" alt="">
+        <div>
+          <svg width="0" height="0">
+            <!-- This path curves from bottom to top like a vertical orbit -->
+            <path id="verticalOrbit" d="M 300,400 A 100 200 0 0 1 300,0" fill="none" />
+          </svg>
 
-        <img src="images\Frame 29.png" class="here_img1" alt="">
+          <img src="images/Zero Koin Silver.svg" class="coin_silver" alt="">
+        </div>
+
+
+        <div class="">
+          <svg class="orbit-svg" viewBox="0 0 600 600">
+            <path d="M 300,300 a 150 150 0 1 1 -1 0" stroke="#00d0ff55" fill="none" stroke-width="1" />
+          </svg>
+
+          <img src="images/Zero Koin Gold.svg" class="coin_silver2" alt="">
+        </div>
+
+
+
+
+        <!-- <img src="images\Frame 29.png" class="here_img1" alt=""> -->
 
 
         <img src="images/Group 15.png" class="here_img2" alt="">
