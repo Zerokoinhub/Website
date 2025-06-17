@@ -30,11 +30,13 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
-        padding: 0 7% 80px 9%;
+        /* padding: 0 7% 80px 9%; */
         flex-wrap: wrap;
         position: relative;
         overflow: hidden;
         margin-top: 3%;
+        position: relative;
+        z-index: 1;
     }
 
     @media screen and (max-width:1100px) {
@@ -46,9 +48,7 @@
     }
 
     @media screen and (max-width:1400px) {
-        .launch-section {
-            margin-top: 15%;
-        }
+
     }
 
     @media screen and (max-width:1400px) {
@@ -58,6 +58,9 @@
     }
 
     @media screen and (max-width:500px) {
+        .launch-section{
+            margin-top: 16%;
+        }
         .key-features {
             margin-top: -2%;
         }
@@ -89,9 +92,7 @@
 
     }
 
-    .launch-section__content {
-        margin-top: -26%;
-    }
+
 </style>
 
 <body>
@@ -119,7 +120,7 @@
     <div class="class_text2"
         style="font-size: 260px; font-weight: 800; line-height: 100%; width: 100%; opacity: 1.5%; position: absolute;left: 2%; ">
         ZEROKOIN</div>
-    <div style="position: relative; margin-top: 0%; ">
+    <div style="position: relative;">
         <div style="position: absolute; margin-top: -10%; right: 3%" class="class_imge1">
             <img src="images\Group 15.png" class="here_img2" style="width: 400px;" alt="">
         </div>
