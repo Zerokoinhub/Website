@@ -832,7 +832,7 @@ ul {
 
 }
 
-@media (max-width: 414px) {
+@media (max-width: 500px) {
   .coin_silver {
     top: 18%;
     left: -10%;
@@ -844,6 +844,54 @@ ul {
   }
 
 }
+
+
+
+@media (max-width: 600px) {
+  .coin_silver {
+    top: 18%;
+    left: -10%;
+  }
+
+  .coin_silver2 {
+    top: -19%;
+    left: 28%;
+  }
+
+}
+
+
+@media (max-width: 414px) {
+  .coin_silver {
+    top: 18%;
+    left: -10%;
+  }
+
+  .coin_silver2 {
+    top: -19%;
+    left: 28%;
+  }
+}
+
+
+
+@media (max-width: 413px) {
+  .coin_silver {
+    top: 18%;
+    left: -10%;
+  }
+
+  .coin_silver2 {
+    top: -19%;
+    left: 28%;
+  }
+
+}
+
+
+
+
+
 
 
 
@@ -859,6 +907,8 @@ ul {
   }
 
 }
+
+
 
 @media (min-width: 1024px) {
 
