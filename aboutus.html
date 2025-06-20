@@ -202,7 +202,7 @@
         }
     }
 
- 
+
 
     @media screen and (max-width:1400px) {
         .top_gradient {
@@ -255,6 +255,26 @@
             /* position: absolute; */
         }
     }
+
+    .Contact_Grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+        margin-top: 5%;
+    }
+
+    @media screen and (max-width:530px) {
+        .Contact_Grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-top: 5%;
+        }
+    }
 </style>
 
 <body>
@@ -274,6 +294,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="downloadapp.html">Download dApp</a></li>
                     <li><a href="aboutus.html">About us</a></li>
+                    <li><a href="Privacypolicy.html">Privacy Policy</a></li>
                 </ul>
             </nav>
         </div>
@@ -384,20 +405,57 @@
     </section>
 
     <section class="contact-section">
-        <h2>Reach out to us</h2>
-        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
-            <label>Name
-                <input type="text" name="name" placeholder="name" required />
-            </label>
-            <label>Email
-                <input type="email" name="email" placeholder="email@xyz.com" required />
-            </label>
-            <label>
-                Your Message
-                <textarea name="message" placeholder="your detail Message" required></textarea>
-            </label>
-            <button type="submit">Submit</button>
-        </form>
+        <h2>Get in Touch with the Right <span style="color: #22D3EE!important">Team</span></h2>
+        <div style="" class="Contact_Grid">
+            <div style="display: flex; align-items: center; flex-direction: column;">
+                <span>General Information</span>
+                <div
+                    style=" margin: 10px auto; border:1px solid #FFFFFF; padding:12px 14px 10px 12px;border-radius: 30px; ">
+                    <a href="mailto:info@zerokoin.com" style="display: flex; align-items: center; flex-direction: row; gap: 0.5rem;">
+                        <img src="images\ep_info-filled.svg" style="" height="30px"
+                            width="30px" alt="">
+                        <span>info@zerokoin.com</span>
+                    </a>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; flex-direction: column;">
+                <span>Technical issues & bug reports </span>
+                <div
+                    style=" margin: 10px auto; border:1px solid #FFFFFF; padding:12px 14px 10px 12px;border-radius: 30px;">
+                    <a href="mailto:support@zerokoin.com" style="display: flex; align-items: center; flex-direction: row; gap: 0.5rem;">
+                        <img src="images\Suport_Vec.svg" style="" height="30px"
+                            width="30px" alt="">
+                        <span>support@zerokoin.com</span>
+                    </a>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; flex-direction: column;">
+                <span>For business inquiries, token sales, listing deals</span>
+                <div
+                    style=" margin: 10px auto; border:1px solid #FFFFFF; padding:12px 14px 10px 12px;border-radius: 30px;">
+                    <a href="mailto:sales@zerokoin.com" style="display: flex; align-items: center; flex-direction: row; gap: 0.5rem;">
+                        <img src="images\sales-report.svg" style="" height="30px"
+                            width="30px" alt="">
+                        <span>sales@zerokoin.com</span>
+                    </a>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; flex-direction: column;">
+                <span>Admin-level queries, legal, compliance, escalation</span>
+                <div
+                    style=" margin: 10px auto; border:1px solid #FFFFFF; padding:12px 14px 10px 12px;border-radius: 30px;">
+                    <a href="mailto:admin@zerokoin.com" style="display: flex; align-items: center; flex-direction: row; gap: 0.5rem;">
+                        <img src="images\Adminsvg.svg" style="" height="30px"
+                            width="30px" alt="">
+                        <span>admin@zerokoin.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <section class="download-section-main">
@@ -445,11 +503,13 @@
                 <a href="index.html" class="site-footer__nav-link" style="position: relative; z-index: 1;">Home</a>
                 <a href="downloadapp.html" class="site-footer__nav-link">Download dApp</a>
                 <a href="aboutus.html" class="site-footer__nav-link">About us</a>
+                <a href="Privacypolicy.html" class="site-footer__nav-link">Privacy Policy</a>
+
             </nav>
             <div class="site-footer__socials">
                 <span class="site-footer__socials-label">Follow us</span>
                 <div class="site-footer__social-icons">
-                    <a href="https://twiter.com" class="site-footer__social-icon-btn">
+                    <a href="https://x.com/zerokoinapp" class="site-footer__social-icon-btn">
                         <svg height="20" version="1.1" viewBox="0 0 512 512" width="100%" fill="none"
                             xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
                             <rect height="400" width="400" x="56" y="56"></rect>
@@ -458,7 +518,7 @@
                                 style="fill:#ffffff;fill-rule:nonzero"></path>
                         </svg>
                     </a>
-                    <a href="https://telegram.com" class="site-footer__social-icon-btn">
+                    <a href="https://t.me/zerokoinapp" class="site-footer__social-icon-btn">
                         <svg height="20" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve"
                             xmlns="http://www.w3.org/2000/svg">
                             <g id="_x33_35-telegram">
@@ -474,7 +534,7 @@
                         </svg>
                     </a>
 
-                    <a href="https://discord.com" class="site-footer__social-icon-btn">
+                    <a href="https://bit.ly/zerokoinapp" class="site-footer__social-icon-btn">
                         <svg height="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <title></title>
                             <path fill="#ffffff"

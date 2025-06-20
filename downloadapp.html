@@ -16,11 +16,18 @@
         align-items: center;
     }
 
+    .header-nav-bar {
+        gap: 80px;
+        flex-wrap: wrap;
+
+    }
+
     @media screen and (max-width:639px) {
         .header-nav-bar {
             display: flex;
             justify-content: center;
             align-items: center;
+            gap: 20px;
         }
 
     }
@@ -113,12 +120,28 @@
 </style>
 
 <body>
-    <header>
+    <header class="header">
         <div class="top_gradient" style="position: absolute; left: -18%; top: -600px; z-index: -1;">
             <img src="images\Gradient(1).png" alt="">
         </div>
 
-        <div class="container head" style="position: relative; z-index: 1;">
+        <div class="container top-bar" style="position: relative; z-index: 1;">
+            <div class="crypto-stats-wrapper" style="position: relative; z-index: 1;">
+                <div class="crypto-stats" style="position: relative; z-index: 1;">
+                    <div class="stat">
+                        <p style="">ZEROKOIN/USDT</p>
+                        <span class="head_count">$0.0031</span>
+                    </div>
+                    <div class="stat">
+                        <p>24h Δ</p>
+                        <span class="green">+4.2%</span>
+                    </div>
+                    <div class="stat">
+                        <p>Market Cap</p>
+                        <span>$7,750,000</span>
+                    </div>
+                </div>
+            </div>
             <nav class="header-nav-bar">
                 <div class="logo">
                     <a href="index.html" style="cursor: pointer;">
@@ -130,6 +153,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="downloadapp.html">Download dApp</a></li>
                     <li><a href="aboutus.html">About us</a></li>
+                    <li><a href="Privacypolicy.html">Privacy Policy</a></li>
                 </ul>
             </nav>
         </div>
@@ -313,11 +337,14 @@
                     <a href="index.html" class="site-footer__nav-link" style="position: relative; z-index: 1;">Home</a>
                     <a href="downloadapp.html" class="site-footer__nav-link">Download dApp</a>
                     <a href="aboutus.html" class="site-footer__nav-link">About us</a>
+                    <a href="Privacypolicy.html" class="site-footer__nav-link">Privacy Policy</a>
+
                 </nav>
+
                 <div class="site-footer__socials">
                     <span class="site-footer__socials-label">Follow us</span>
                     <div class="site-footer__social-icons">
-                        <a href="https://twiter.com" class="site-footer__social-icon-btn">
+                        <a href="https://x.com/zerokoinapp" class="site-footer__social-icon-btn">
                             <svg height="20" version="1.1" viewBox="0 0 512 512" width="100%" fill="none"
                                 xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
                                 <rect height="400" width="400" x="56" y="56"></rect>
@@ -326,7 +353,7 @@
                                     style="fill:#ffffff;fill-rule:nonzero"></path>
                             </svg>
                         </a>
-                        <a href="https://telegram.com" class="site-footer__social-icon-btn">
+                        <a href="https://t.me/zerokoinapp" class="site-footer__social-icon-btn">
                             <svg height="20" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g id="_x33_35-telegram">
@@ -342,7 +369,7 @@
                             </svg>
                         </a>
 
-                        <a href="https://discord.com" class="site-footer__social-icon-btn">
+                        <a href="https://bit.ly/zerokoinapp" class="site-footer__social-icon-btn">
                             <svg height="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <title></title>
                                 <path fill="#ffffff"
