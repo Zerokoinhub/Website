@@ -258,14 +258,75 @@
 
     .Contact_Grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         align-items: center;
         justify-content: center;
         gap: 5rem;
         margin-top: 5%;
+        margin-left: 1%;
     }
 
-    @media screen and (max-width:530px) {
+    .Contact_Grid span {
+        font-size: 14px;
+    }
+
+    .bord_col_bar1 {
+        border-right: 1px solid #024550;
+        margin-left: -25%;
+    }
+
+    .bord_col_bar2 {
+        border-right: 1px solid #024550;
+        margin-left: -25%;
+    }
+
+    .bord_col_bar3 {
+        border-right: 1px solid #024550;
+        margin-left: -25%;
+    }
+
+    .bord_col_bar4 {
+        margin-left: -25%;
+    }
+
+    @media screen and (max-width:1280px) {
+        .Contact_Grid {
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-left: 0;
+        }
+
+        .bord_col_bar3 {
+            border: none;
+        }
+
+        .bord_col_bar4 {
+            margin-left: 0;
+        }
+
+
+    }
+
+    @media screen and (max-width:900px) {
+        .Contact_Grid {
+            grid-template-columns: 1fr 1fr;
+            margin-left: 5%;
+        }
+
+        .bord_col_bar2 {
+            border: none;
+        }
+
+        .bord_col_bar3 {
+            border-right: 1px solid #024550;
+        }
+
+        .bord_col_bar4 {
+            margin-left: -25%;
+        }
+
+    }
+
+    @media screen and (max-width:750px) {
         .Contact_Grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -273,7 +334,45 @@
             justify-content: center;
             gap: 2.5rem;
             margin-top: 5%;
+            margin-left: 0;
         }
+
+        .bord_col_bar1 {
+            border: none;
+            margin-left: 0;
+        }
+
+        .bord_col_bar2 {
+            border: none;
+            margin-left: 0;
+        }
+
+        .bord_col_bar3 {
+            border: none;
+            margin-left: 0;
+        }
+         .bord_col_bar4 {
+            border: none;
+            margin-left: 0;
+        }
+    }
+
+    .gradiends img {
+        position: absolute;
+        left: 0px;
+        /* top: 50%; */
+        margin-top: -15%;
+        height: 800px;
+        width: 800px;
+    }
+
+    .gradiends2 img {
+        position: absolute;
+        /* top: 50%; */
+        margin-top: -5%;
+        height: 800px;
+        width: 800px;
+        transform: rotate(180deg);
     }
 </style>
 
@@ -294,7 +393,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="downloadapp.html">Download dApp</a></li>
                     <li><a href="aboutus.html">About us</a></li>
-                    <li><a href="Privacypolicy.html">Privacy Policy</a></li>
+
                 </ul>
             </nav>
         </div>
@@ -326,7 +425,7 @@
 
     <section class="about-us-section">
         <div class="yellow-shadabout class_imge1"
-            style="position: absolute; right: 20%; top:17%; z-index: -99999; width: 728px; height: 544px; border-radius: 23.5px;">
+            style="position: absolute; right: 20%; top:13%; z-index: -99999; width: 728px; height: 544px; border-radius: 23.5px;">
             <img src="images/shadow.svg" alt="">
         </div>
         <div class="about-container">
@@ -405,55 +504,67 @@
     </section>
 
     <section class="contact-section">
+        <div class="gradiends">
+            <img src="images\Gradient(1).png" alt="">
+        </div>
+        <div class="gradiends2">
+            <img src="images\Gradient(1).png" alt="">
+        </div>
         <h2>Get in Touch with the Right <span style="color: #22D3EE!important">Team</span></h2>
         <div style="" class="Contact_Grid">
-            <div style="display: flex; align-items: center; flex-direction: column;">
+
+            <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;"
+                class="bord_col_bar1">
                 <span>General Information</span>
                 <div
                     style=" margin: 10px auto; border:1px solid #FFFFFF; padding:12px 14px 10px 12px;border-radius: 30px; ">
-                    <a href="mailto:info@zerokoin.com" style="display: flex; align-items: center; flex-direction: row; gap: 0.5rem;">
-                        <img src="images\ep_info-filled.svg" style="" height="30px"
-                            width="30px" alt="">
+                    <a href="mailto:info@zerokoin.com"
+                        style="display: flex; align-items: center; flex-direction: row; gap: 0.5rem;">
+                        <img src="images\ep_info-filled.svg" style="" height="30px" width="30px" alt="">
                         <span>info@zerokoin.com</span>
                     </a>
                 </div>
             </div>
 
-            <div style="display: flex; align-items: center; flex-direction: column;">
+            <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;"
+                class="bord_col_bar2">
                 <span>Technical issues & bug reports </span>
                 <div
                     style=" margin: 10px auto; border:1px solid #FFFFFF; padding:12px 14px 10px 12px;border-radius: 30px;">
-                    <a href="mailto:support@zerokoin.com" style="display: flex; align-items: center; flex-direction: row; gap: 0.5rem;">
-                        <img src="images\Suport_Vec.svg" style="" height="30px"
-                            width="30px" alt="">
+                    <a href="mailto:support@zerokoin.com"
+                        style="display: flex; align-items: center; flex-direction: row; gap: 0.5rem;">
+                        <img src="images\Suport_Vec.svg" style="" height="30px" width="30px" alt="">
                         <span>support@zerokoin.com</span>
                     </a>
                 </div>
             </div>
 
-            <div style="display: flex; align-items: center; flex-direction: column;">
+            <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;"
+                class="bord_col_bar3">
                 <span>For business inquiries, token sales, listing deals</span>
                 <div
                     style=" margin: 10px auto; border:1px solid #FFFFFF; padding:12px 14px 10px 12px;border-radius: 30px;">
-                    <a href="mailto:sales@zerokoin.com" style="display: flex; align-items: center; flex-direction: row; gap: 0.5rem;">
-                        <img src="images\sales-report.svg" style="" height="30px"
-                            width="30px" alt="">
+                    <a href="mailto:sales@zerokoin.com"
+                        style="display: flex; align-items: center; flex-direction: row; gap: 0.5rem;">
+                        <img src="images\sales-report.svg" style="" height="30px" width="30px" alt="">
                         <span>sales@zerokoin.com</span>
                     </a>
                 </div>
             </div>
 
-            <div style="display: flex; align-items: center; flex-direction: column;">
+            <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;"
+                class="bord_col_bar4">
                 <span>Admin-level queries, legal, compliance, escalation</span>
                 <div
                     style=" margin: 10px auto; border:1px solid #FFFFFF; padding:12px 14px 10px 12px;border-radius: 30px;">
-                    <a href="mailto:admin@zerokoin.com" style="display: flex; align-items: center; flex-direction: row; gap: 0.5rem;">
-                        <img src="images\Adminsvg.svg" style="" height="30px"
-                            width="30px" alt="">
+                    <a href="mailto:admin@zerokoin.com"
+                        style="display: flex; align-items: center; flex-direction: row; gap: 0.5rem;">
+                        <img src="images\Adminsvg.svg" style="" height="30px" width="30px" alt="">
                         <span>admin@zerokoin.com</span>
                     </a>
                 </div>
             </div>
+
         </div>
 
     </section>
@@ -504,6 +615,8 @@
                 <a href="downloadapp.html" class="site-footer__nav-link">Download dApp</a>
                 <a href="aboutus.html" class="site-footer__nav-link">About us</a>
                 <a href="Privacypolicy.html" class="site-footer__nav-link">Privacy Policy</a>
+                <a href="term.html" class="site-footer__nav-link">Terms</a>
+
 
             </nav>
             <div class="site-footer__socials">
@@ -547,17 +660,6 @@
                             </linearGradient>
                         </svg>
                     </a>
-
-                    <a href="https://raddit.com" class="site-footer__social-icon-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-reddit" viewBox="0 0 16 16">
-                            <path
-                                d="M6.167 8a.83.83 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661m1.843 3.647c.315 0 1.403-.038 1.976-.611a.23.23 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83s.83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
-                            <path
-                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.2.2 0 0 0-.153.028.2.2 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224q-.03.17-.029.353c0 1.795 2.091 3.256 4.669 3.256s4.668-1.451 4.668-3.256c0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165" />
-                        </svg>
-                    </a>
-
                     <a href="https://github.com" class="site-footer__social-icon-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-github" viewBox="0 0 16 16">

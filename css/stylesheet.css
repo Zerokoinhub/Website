@@ -151,6 +151,13 @@ ul {
   }
 }
 
+@media screen and (max-width:364px) {
+  .crypto-stats {
+    padding: 12px 11px;
+  }
+}
+
+
 
 @media screen and (max-width:900px) {
   .crypto-stats {
@@ -233,7 +240,7 @@ ul {
 .header-nav-bar {
   display: flex;
   align-items: center;
-  gap: 100px;
+  gap: 200px;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid #2c3e50;
   padding: 15px 45px 15px 24px;
@@ -314,7 +321,7 @@ ul {
   }
 
   .nav-links {
-    gap: 1.02rem;
+    gap: 2rem;
   }
 }
 
@@ -376,7 +383,7 @@ ul {
 .hero-section .hero-text h1 {
   font-size: 60px;
   font-weight: 700;
-  line-height: 60px;
+  line-height: 80px;
   margin-bottom: 25px;
 }
 
@@ -392,6 +399,8 @@ ul {
 @media screen and (max-width:558px) {
   .hero-section .hero-text h1 {
     font-size: 30px;
+    line-height: 50px;
+
   }
 
   .hero-section .hero-text .description {
@@ -1001,14 +1010,14 @@ ul {
 
 @media screen and (max-width:500px) {
 
-  
-.about-us-section .about-title {
-  font-size: 38px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  line-height: 140%;
-  color: #FFFFFF;
-}
+
+  .about-us-section .about-title {
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 140%;
+    color: #FFFFFF;
+  }
 }
 
 .about-us-section .about-text {
@@ -1254,6 +1263,20 @@ ul {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+}
+
+@media screen and (max-width:600px) {
+  .launch-section .launch-section__heading {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+
+    background: linear-gradient(90deg, #FFFFFF 0%, #999999 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
 }
 
 .launch-section .launch-section__desc {
@@ -2827,7 +2850,7 @@ ul {
   margin: 0 auto;
   flex-wrap: wrap;
   gap: 30px;
-  padding: 56px 78px 30px 93px;
+  padding: 20px 78px 2px 93px;
   position: relative;
   /* Creates new stacking context */
   z-index: 1;
@@ -2858,12 +2881,24 @@ ul {
 
 .site-footer__nav {
   display: flex;
-  gap: 40px;
-  /* Increased gap to match image spacing */
+  gap: 20px;
   flex-shrink: 0;
   flex-wrap: wrap;
-  justify-content: center;
-  /* Prevent shrinking on smaller screens initially */
+  max-width: 300px;
+  margin-top: 40px;
+}
+
+@media screen and (max-width:500px) {
+  .site-footer__nav {
+    display: flex;
+    gap: 20px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 300px;
+    margin-top: 40px;
+  }
+
 }
 
 .site-footer__nav-link {

@@ -28,7 +28,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
     margin-top: -2%;
   }
 
@@ -537,6 +536,16 @@
       font-weight: 700;
     }
   }
+
+  .accordion-content {
+    display: none;
+    transition: all 0.3s ease;
+  }
+
+  /* Add this if you want the accordion to stay open when navigating away and back */
+  :target {
+    display: block;
+  }
 </style>
 
 <body>
@@ -573,7 +582,6 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="downloadapp.html">Download dApp</a></li>
           <li><a href="aboutus.html">About us</a></li>
-          <li><a href="Privacypolicy.html">Privacy Policy</a></li>
         </ul>
       </nav>
     </div>
@@ -588,7 +596,7 @@
           <span>REWARDS.</span>
         </p>
         <div class="hero-buttons" style="position: relative; z-index: 1;">
-          <a href="#" class="btn blue">Buy ZEROKOIN</a>
+          <a href="#how-to-buy" class="btn blue">Buy ZEROKOIN</a>
           <a href="#" class="btn border">Download dApp</a>
         </div>
       </div>
@@ -652,7 +660,7 @@
         </div>
 
       </div>
-      <div class="about-right">
+      <div class="about-right" id="how-to-buy">
         <h5 class="section-label">About Zero Coin</h5>
         <h2 class="about-title">What is Zero Koin?</h2>
         <p class="about-text">
@@ -690,7 +698,7 @@
               </p>
             </div>
           </div>
-          <div class="accordion-item">
+          <div class="accordion-item" >
             <button class="accordion-toggle">
               How to Buy Zero Koin ?
               <span class="arrow" style="background-color: #cccccc33; padding: 5px 10px; border-radius: 100%;"><img
@@ -1143,7 +1151,7 @@
 
 
   <section class="download-section-main">
-    <div class="sectiontop-border-circle" style="z-index: 1;" id="scrollToTopBtn">
+    <div class="sectiontop-border-circle"  id="scrollToTopBtn">
       <div class="download-section-main__scroll-to-top">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up">
@@ -1184,7 +1192,9 @@
         <a href="index.html" class="site-footer__nav-link" style="position: relative; z-index: 1;">Home</a>
         <a href="downloadapp.html" class="site-footer__nav-link">Download dApp</a>
         <a href="aboutus.html" class="site-footer__nav-link">About us</a>
-        <a href="Privacypolicy.html" class="site-footer__nav-link">Privacy Policy</a>
+        <a href="Privacypolicy.html" style="font-size: 0.8em !important;  text-decoration: underline;" class="site-footer__nav-link">Privacy Policy</a>
+        <a href="term.html" class="site-footer__nav-link" style="font-size: 0.8em !important; text-decoration: underline;">Terms</a>
+
 
       </nav>
       <div class="site-footer__socials">
@@ -1229,15 +1239,6 @@
             </svg>
           </a>
 
-          <a href="https://raddit.com" class="site-footer__social-icon-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reddit"
-              viewBox="0 0 16 16">
-              <path
-                d="M6.167 8a.83.83 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661m1.843 3.647c.315 0 1.403-.038 1.976-.611a.23.23 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83s.83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
-              <path
-                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.2.2 0 0 0-.153.028.2.2 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224q-.03.17-.029.353c0 1.795 2.091 3.256 4.669 3.256s4.668-1.451 4.668-3.256c0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165" />
-            </svg>
-          </a>
 
           <a href="https://github.com" class="site-footer__social-icon-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
@@ -1279,7 +1280,44 @@
           alert('Address copied to clipboard!');
         });
     }
+    document.addEventListener('DOMContentLoaded', function () {
+      // Check if URL has #how-to-buy hash
+      if (window.location.hash === '#how-to-buy') {
+        const accordionItem = document.getElementById('how-to-buy');
+        const accordionContent = accordionItem.querySelector('.accordion-content');
+        const accordionToggle = accordionItem.querySelector('.accordion-toggle');
 
+        // Open the accordion
+        accordionContent.style.display = 'block';
+        accordionToggle.setAttribute('aria-expanded', 'true');
+
+        // Scroll to the accordion (smooth scroll)
+        accordionItem.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      // Add click handler for accordion toggles (if not already present)
+      const accordionToggles = document.querySelectorAll('.accordion-toggle');
+      accordionToggles.forEach(toggle => {
+        toggle.addEventListener('click', function () {
+          const content = this.nextElementSibling;
+          const isOpen = content.style.display === 'block';
+
+          // Close all accordions first
+          document.querySelectorAll('.accordion-content').forEach(item => {
+            item.style.display = 'none';
+          });
+          document.querySelectorAll('.accordion-toggle').forEach(item => {
+            item.setAttribute('aria-expanded', 'false');
+          });
+
+          // Open clicked one if it was closed
+          if (!isOpen) {
+            content.style.display = 'block';
+            this.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    });
   </script>
 
 
