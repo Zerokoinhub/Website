@@ -251,9 +251,6 @@
     }
 
     @media screen and (max-width:500px) {
-        .download-section-main__floating-icon--left {
-            /* position: absolute; */
-        }
     }
 
     .Contact_Grid {
@@ -372,7 +369,7 @@
         /* top: 50%; */
         margin-top: -5%;
         height: 800px;
-        width: 800px;
+        width: 1000px;
         transform: rotate(180deg);
     }
 </style>
@@ -418,8 +415,34 @@
         </div>
 
         <div class="launch-section__visual">
-            <img src="images\galaxyImg.webp" alt="Mobile Screen" class="mobile-screen"
-                style="width: 100%; max-width: 935px;">
+    <img src="images/galaxyImg.webp" alt="Galaxy" class="fan-spin">
+</div>
+
+<style>
+.launch-section__visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fan-spin {
+    width: 600px;              /* size adjust kar lo */
+    height: 600px;
+    object-fit: contain;       /* image stretch na ho */
+    animation: spin 15s linear infinite;
+    transform-origin: center;  /* center se ghoomega */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+</style>
+
         </div>
     </section>
 
@@ -450,7 +473,7 @@
                 <p class="about-text">
                     We’re a team of blockchain believers, developers, and educators on a mission to make crypto simple,
                     rewarding, and accessible. Whether you're just starting out or looking to sharpen your skills, Zero
-                    Koin offers a path to grow, earn, and lead. With thousands already holding ZEROKOIN, our growing
+                    Koin offers a path to grow, earn, and lead. With thousands already holding ZRK, our growing
                     community is built on real utility, long-term value, and shared success.
                 </p>
             </div>
@@ -512,7 +535,7 @@
             <img src="images\Gradient(1).png" alt="">
         </div>
         <h2>Get in Touch with the Right <span style="color: #22D3EE!important">Team</span></h2>
-        <div style="" class="Contact_Grid">
+        <div class="Contact_Grid">
 
             <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;"
                 class="bord_col_bar1">
@@ -521,7 +544,7 @@
                     style=" margin: 10px auto; border:1px solid #FFFFFF; padding:12px 14px 10px 12px;border-radius: 30px; ">
                     <a href="mailto:info@zerokoin.com"
                         style="display: flex; align-items: center; flex-direction: row; gap: 0.5rem;">
-                        <img src="images\ep_info-filled.svg" style="" height="30px" width="30px" alt="">
+                        <img src="images\ep_info-filled.svg" height="30px" width="30px" alt="">
                         <span>info@zerokoin.com</span>
                     </a>
                 </div>
@@ -534,7 +557,7 @@
                     style=" margin: 10px auto; border:1px solid #FFFFFF; padding:12px 14px 10px 12px;border-radius: 30px;">
                     <a href="mailto:support@zerokoin.com"
                         style="display: flex; align-items: center; flex-direction: row; gap: 0.5rem;">
-                        <img src="images\Suport_Vec.svg" style="" height="30px" width="30px" alt="">
+                        <img src="images\Suport_Vec.svg" height="30px" width="30px" alt="">
                         <span>support@zerokoin.com</span>
                     </a>
                 </div>
@@ -547,7 +570,7 @@
                     style=" margin: 10px auto; border:1px solid #FFFFFF; padding:12px 14px 10px 12px;border-radius: 30px;">
                     <a href="mailto:sales@zerokoin.com"
                         style="display: flex; align-items: center; flex-direction: row; gap: 0.5rem;">
-                        <img src="images\sales-report.svg" style="" height="30px" width="30px" alt="">
+                        <img src="images\sales-report.svg" height="30px" width="30px" alt="">
                         <span>sales@zerokoin.com</span>
                     </a>
                 </div>
@@ -560,7 +583,7 @@
                     style=" margin: 10px auto; border:1px solid #FFFFFF; padding:12px 14px 10px 12px;border-radius: 30px;">
                     <a href="mailto:admin@zerokoin.com"
                         style="display: flex; align-items: center; flex-direction: row; gap: 0.5rem;">
-                        <img src="images\Adminsvg.svg" style="" height="30px" width="30px" alt="">
+                        <img src="images\Adminsvg.svg" height="30px" width="30px" alt="">
                         <span>admin@zerokoin.com</span>
                     </a>
                 </div>
@@ -650,7 +673,7 @@
                         </svg>
                     </a>
 
-                    <a href="https://bit.ly/zerokoinapp" class="site-footer__social-icon-btn">
+                    <a href="https://discord.gg/KauZWYznV8" class="site-footer__social-icon-btn">
                         <svg height="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <title></title>
                             <path fill="#ffffff"
@@ -663,7 +686,7 @@
                             </linearGradient>
                         </svg>
                     </a>
-                    <a href="https://github.com" class="site-footer__social-icon-btn">
+                    <a href="https://github.com/Zerokoinhub" class="site-footer__social-icon-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-github" viewBox="0 0 16 16">
                             <path
